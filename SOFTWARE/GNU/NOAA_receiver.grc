@@ -112,7 +112,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1120, 604.0]
+    coordinate: [1056, 604.0]
     rotation: 0
     state: true
 - name: audio_sink_0
@@ -129,7 +129,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1880, 384.0]
+    coordinate: [1840, 376.0]
     rotation: 0
     state: true
 - name: blocks_multiply_const_vxx_0
@@ -147,7 +147,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1624, 384.0]
+    coordinate: [1552, 376.0]
     rotation: 0
     state: true
 - name: blocks_multiply_const_vxx_1
@@ -165,7 +165,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1800, 544.0]
+    coordinate: [1776, 528.0]
     rotation: 0
     state: true
 - name: blocks_wavfile_sink_0
@@ -187,7 +187,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1952, 704.0]
+    coordinate: [1968, 664.0]
     rotation: 0
     state: true
 - name: low_pass_filter_0
@@ -441,7 +441,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [824, 588.0]
+    coordinate: [760, 588.0]
     rotation: 0
     state: enabled
 - name: rational_resampler_xxx_1
@@ -461,7 +461,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1400, 588.0]
+    coordinate: [1312, 588.0]
     rotation: 0
     state: true
 - name: rational_resampler_xxx_2
@@ -481,7 +481,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1632, 804.0]
+    coordinate: [1552, 804.0]
     rotation: 0
     state: true
 - name: rtlsdr_source_0
