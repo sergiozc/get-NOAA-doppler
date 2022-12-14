@@ -211,7 +211,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [480, 560.0]
+    coordinate: [520, 568.0]
     rotation: 0
     state: enabled
 - name: notebook_rf
