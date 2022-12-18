@@ -1,11 +1,11 @@
 REPOSITORIO CORRECCIÓN EFECTO DOPPLER CON TRUKING GPREDICT
 https://github.com/ghostop14/gr-gpredict-doppler
 
-TUTORIAL RECEPCIÓN DE SATÉLITE
+TUTORIAL RECEPCIÓN DE SATÉLITE NOAA
 https://www.rtl-sdr.com/rtl-sdr-tutorial-receiving-noaa-weather-satellite-images/
 
-
-TIPOS DE ANTENAS
+TUTORIAL RECEPCIÓN SATÉLITE METEOR
+https://www.rtl-sdr.com/wp-content/uploads/2014/09/Happysat_Meteosat_LRPT_Tutorial.pdf
 
 V-Dipole:
 https://www.rtl-sdr.com/simple-noaameteor-weather-satellite-antenna-137-mhz-v-dipole/

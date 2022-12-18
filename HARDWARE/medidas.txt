@@ -1,0 +1,5 @@
+- Cada dipolo: 53.4 cm (contando curvatura)
+
+- Longitud cable coaxial: 1.3 metros 
+
+- 2 fichas de empalme (una para cada dipolo)
