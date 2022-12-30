@@ -171,7 +171,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    file: C:\Users\Usuario\Desktop\SEI\PROYECTO\get-sat-project\HARDWARE\grabaciones\audio_NOOA18.wav
+    file: C:\Users\Usuario\Desktop\SEI\PROYECTO\get-sat-project\HARDWARE\grabaciones\SDRSharp_20221230_190746Z_137620000Hz_AF.wav
     maxoutbuf: '0'
     minoutbuf: '0'
     nchan: '1'
@@ -261,7 +261,7 @@ blocks:
     y_end_value: '0.0'
     y_label: '""'
     y_start_value: '0.0'
-    zmax: '0.1'
+    zmax: '0.06'
     zmin: '0'
   states:
     bus_sink: false
