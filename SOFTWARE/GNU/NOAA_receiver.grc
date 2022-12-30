@@ -197,7 +197,7 @@ blocks:
     alias: ''
     beta: '6.76'
     comment: ''
-    cutoff_freq: 40e3
+    cutoff_freq: 20e3
     decim: '1'
     gain: '1'
     interp: '1'
@@ -205,7 +205,7 @@ blocks:
     minoutbuf: '0'
     samp_rate: samp_rate
     type: fir_filter_ccf
-    width: 10e3
+    width: '500'
     win: window.WIN_HAMMING
   states:
     bus_sink: false

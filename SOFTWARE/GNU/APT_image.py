@@ -78,14 +78,14 @@ class APT_image(gr.top_block, Qt.QWidget):
         # Variables
         ##################################################
         self.samp_rate2 = samp_rate2 = 100e3
-        self.samp_rate = samp_rate = 11.025e3
+        self.samp_rate = samp_rate = 37.5e3
 
         ##################################################
         # Blocks
         ##################################################
         self.rational_resampler_xxx_0 = filter.rational_resampler_ccc(
-                interpolation=4000,
-                decimation=441,
+                interpolation=8,
+                decimation=3,
                 taps=[],
                 fractional_bw=0)
         self.qtgui_time_raster_sink_x_0 = qtgui.time_raster_sink_f(
@@ -100,7 +100,7 @@ class APT_image(gr.top_block, Qt.QWidget):
         )
 
         self.qtgui_time_raster_sink_x_0.set_update_time(0.10)
-        self.qtgui_time_raster_sink_x_0.set_intensity_range(0, 0.42)
+        self.qtgui_time_raster_sink_x_0.set_intensity_range(0, 0.1)
         self.qtgui_time_raster_sink_x_0.enable_grid(False)
         self.qtgui_time_raster_sink_x_0.enable_axis_labels(True)
         self.qtgui_time_raster_sink_x_0.set_x_label("")
@@ -110,7 +110,7 @@ class APT_image(gr.top_block, Qt.QWidget):
 
         labels = ['', '', '', '', '',
             '', '', '', '', '']
-        colors = [0, 0, 0, 0, 0,
+        colors = [2, 0, 0, 0, 0,
             0, 0, 0, 0, 0]
         alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
             1.0, 1.0, 1.0, 1.0, 1.0]
@@ -124,11 +124,7 @@ class APT_image(gr.top_block, Qt.QWidget):
             self.qtgui_time_raster_sink_x_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_time_raster_sink_x_0_win = sip.wrapinstance(self.qtgui_time_raster_sink_x_0.qwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_time_raster_sink_x_0_win, 6, 5, 5, 5)
-        for r in range(6, 11):
-            self.top_grid_layout.setRowStretch(r, 1)
-        for c in range(5, 10):
-            self.top_grid_layout.setColumnStretch(c, 1)
+        self.top_layout.addWidget(self._qtgui_time_raster_sink_x_0_win)
         self.low_pass_filter_0 = filter.fir_filter_ccf(
             10,
             firdes.low_pass(
@@ -138,12 +134,12 @@ class APT_image(gr.top_block, Qt.QWidget):
                 200,
                 window.WIN_BLACKMAN,
                 6.76))
-        self.blocks_wavfile_source_0 = blocks.wavfile_source('C:\\Users\\Usuario\\Desktop\\SEI\\PROYECTO\\get-sat-project\\HARDWARE\\pruebas_wav\\090729 1428 noaa-18.wav', True)
+        self.blocks_wavfile_source_0 = blocks.wavfile_source('C:\\Users\\Usuario\\Desktop\\SEI\\PROYECTO\\get-sat-project\\HARDWARE\\grabaciones\\audio_NOOA18.wav', True)
         self.blocks_null_source_0 = blocks.null_source(gr.sizeof_float*1)
         self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
         self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
         self.blocks_complex_to_mag_0 = blocks.complex_to_mag(1)
-        self.audio_sink_0 = audio.sink(16000, '', True)
+        self.audio_sink_0 = audio.sink(32000, '', True)
         self.analog_sig_source_x_0 = analog.sig_source_c(samp_rate2, analog.GR_COS_WAVE, (-2.4e3), 1, 0, 0)
 
 
