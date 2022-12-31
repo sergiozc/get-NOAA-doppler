@@ -100,7 +100,7 @@ class APT_image(gr.top_block, Qt.QWidget):
         )
 
         self.qtgui_time_raster_sink_x_0.set_update_time(0.10)
-        self.qtgui_time_raster_sink_x_0.set_intensity_range(0, 0.06)
+        self.qtgui_time_raster_sink_x_0.set_intensity_range(0, 0.2)
         self.qtgui_time_raster_sink_x_0.enable_grid(False)
         self.qtgui_time_raster_sink_x_0.enable_axis_labels(True)
         self.qtgui_time_raster_sink_x_0.set_x_label("")
@@ -134,7 +134,7 @@ class APT_image(gr.top_block, Qt.QWidget):
                 200,
                 window.WIN_BLACKMAN,
                 6.76))
-        self.blocks_wavfile_source_0 = blocks.wavfile_source('C:\\Users\\Usuario\\Desktop\\SEI\\PROYECTO\\get-sat-project\\HARDWARE\\grabaciones\\SDRSharp_20221230_190746Z_137620000Hz_AF.wav', True)
+        self.blocks_wavfile_source_0 = blocks.wavfile_source('C:\\Users\\Usuario\\Desktop\\SEI\\PROYECTO\\get-sat-project\\HARDWARE\\grabaciones\\NOAA15_5min_amplificada.wav', True)
         self.blocks_null_source_0 = blocks.null_source(gr.sizeof_float*1)
         self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
         self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
