@@ -10,12 +10,15 @@ close all;
 % Experimental signal
 [exp, Fs1] = audioread("grabaciones/NOAA15_5min.wav");
 % Theorical signal (from web)
-[teo, Fs2] = audioread("pruebas_wav/090729 1428 noaa-18.wav");
+[teo, fs] = audioread("pruebas_wav/090729 1428 noaa-18.wav");
 
 T1 = 1 / Fs1;
-T2 = 1 / Fs2;
+T2 = 1 / fs;
 t1 = (0:length(exp)-1) * T1;
 t2 = (0:length(teo)-1) * T2;
+
+
+%% Testing the experimental signal
 
 % It is necessary to enhance the experimental signal in order to display the
 %APT image correctly (increasing the amplitude)
@@ -60,13 +63,13 @@ t3 = (0:length(exp100kHz)-1) * T3;
 LO = cos(2 * pi * (-2.4e3) * t3)';
 BB = exp100kHz .* LO;
 
-figure(4);
-[Pxx, Fxx] = pwelch(BB,4096,2048,4096,Fs3, 'centered','power');
-plot(Fxx, 10*log10(Pxx));
-xlim([-Fs3/2 Fs3/2]);
-title('Base Band Subcarrier');
-xlabel('Frequency (Hz)');
-ylabel('Amplitude (dB)');
+% figure(4);
+% [Pxx, Fxx] = pwelch(BB,4096,2048,4096,Fs3, 'centered','power');
+% plot(Fxx, 10*log10(Pxx));
+% xlim([-Fs3/2 Fs3/2]);
+% title('Base Band Subcarrier');
+% xlabel('Frequency (Hz)');
+% ylabel('Amplitude (dB)');
 
 
 %Low pass filter to purge the armonics

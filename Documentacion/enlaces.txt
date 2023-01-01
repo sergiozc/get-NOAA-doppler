@@ -27,3 +27,6 @@ https://users.utcluj.ro/~atn/papers/ATN_2_2013_6.pdf
 
 NOAA decoder AM demod GNU radio
 http://www.site2241.net/december2020.htm
+
+Explicación sync A y sync B
+https://project.markroland.com/weather-satellite-imaging/WxSat_report.pdf
