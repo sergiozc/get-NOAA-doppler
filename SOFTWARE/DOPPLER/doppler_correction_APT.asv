@@ -56,7 +56,7 @@ APT_image_corrected = ifft2(APT_FFT_shifted);
 % Metricas de error % 
 % Calcular métricas de evaluación de modelo
 Y = Sync_A;
-Ypred = APT_image_corrected(end,:);
+Ypred = APT_image_corrected(1,:);
 R2 = 1 - sum((Y - Ypred).^2)/sum((Y - mean(Y)).^2);
 MSE = mean((Y - Ypred).^2);
 MAE = mean(abs(Y - Ypred));
