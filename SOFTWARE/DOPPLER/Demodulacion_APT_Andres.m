@@ -183,8 +183,15 @@ title('Imagen recibida');
 
 % Remuestrea la señal en cada fila para que la imagen tenga el número correcto
 % de puntos de datos para que la relación de aspecto sea 1:1
+
+% Estos valores de P y Q están elegidos de forma que fs_resampled sea
+% entero, para cualquier otra fs habría que recalcularlos!
+P = 1664;
+Q = 2205;
+fs_resampled = fs*P/Q;
+
 for k=1:rows
-M(k,1:4161)=resample(Imagen_Bruta(k,1:colums),1664,2205);
+M(k,1:(fs_resampled/2)+1)=resample(Imagen_Bruta(k,1:colums),1664,2205);
 end
 
 % Normaliza los puntos de datos entre 0 y 255 para la imagen
