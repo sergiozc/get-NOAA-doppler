@@ -25,7 +25,13 @@ y=out/max(out);%%Normalizes the message signal
 
 t=[0:T2:1/160];%%Length of the sync wave form in time at the 
 %%sampling freq
+%Creo que es para que tenga una longitud temporal similar al del estándar
+%APT. Este dura 1/160= 0.00625 mientras que el estándar son 7 ciclos a
+%1040 Hz que sería 7/1040 = 0.00673. Igual se hace para tener una fracción
+%simple¿?. Si pones un valor más alto de 7/1040 funciona igual.
+
 cA=(square(1040*t*(2*pi)));%%Creates the expected sync pulse
+%la frecuencia es 1040 Hz para el pulso rectangular de syncA.
 
 hA=conv(transpose(cA),y(1:length(y)));%%Preforms the correlation
 syncA=hA(length(cA):length(hA));%%Removes the convolution tails
