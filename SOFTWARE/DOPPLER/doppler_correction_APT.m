@@ -67,6 +67,7 @@ disp(['MSE = ', num2str(MSE)]);
 disp(['MAE = ', num2str(MAE)]);
 
 %% Mostrar imagen corregida
+figure(2)
 imshow(APT_image_corrected);
 
 
