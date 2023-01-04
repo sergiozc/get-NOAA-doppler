@@ -25,7 +25,8 @@ Sync_A = APT_image(end,:); % Seleccionar la fila 50 de la imagen
 Sync_A = double(Sync_A); % El modelo solo acepta datos tipo doble.
 
 % Definir función de modelo para la regresión lineal
-% El modelo relaciona la longitud de la fila con la frecuencia Doppler y la cantidad de desplazamiento de frecuencia
+% El modelo relaciona la longitud de la fila con la frecuencia Doppler 
+% y la cantidad de desplazamiento de frecuencia
 model_fun = @(x,xdata) x(1) * sin(2*pi*x(2)*xdata + x(3));
 
 % Inicializar parámetros de la regresión lineal

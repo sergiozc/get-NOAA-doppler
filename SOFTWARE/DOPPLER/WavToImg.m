@@ -90,26 +90,26 @@ for l=1:rows-1
 raw(l,1:5513)=y(goodlist(l):goodlist(l)+colums-1);
 end
 
-%%Resamples the signal in each row so that the picture will have the right
-%%number of data points so that the aspect ratio is 1:1
-% for k=1:length(goodlist)
-%     M(k,1:4161)=resample(raw(k,1:colums),1664,2205);
-% end
+%Resamples the signal in each row so that the picture will have the right
+%number of data points so that the aspect ratio is 1:1
+for k=1:length(goodlist)
+    M(k,1:4161)=resample(raw(k,1:colums),1664,2205);
+end
 M = raw;
-% fs=4160;%%New sampling frequency
-%%Contrast Loop so that the signal will have the right amount of contrast
-%%for the user.
-% loop=1;
-% scale=0;
-% while (loop==1)
-% %%Normalizes the data points between 0 and 255 for the image
-% minM=min(min(M));
-% maxM=max(max(M));
-% range=(maxM-minM);
-% Map=M./range;
-% minMap=min(min(Map));
-% Map=Map-minMap;
-% Map=Map*255*.25^scale;
+fs=4160;%%New sampling frequency
+%Contrast Loop so that the signal will have the right amount of contrast
+%for the user.
+loop=1;
+scale=0;
+while (loop==1)
+%%Normalizes the data points between 0 and 255 for the image
+minM=min(min(M));
+maxM=max(max(M));
+range=(maxM-minM);
+Map=M./range;
+minMap=min(min(Map));
+Map=Map-minMap;
+Map=Map*255*.25^scale;
 figure(2)
 imagesc(M);
 axis image;
