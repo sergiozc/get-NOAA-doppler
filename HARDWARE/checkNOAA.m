@@ -8,12 +8,12 @@ clear all;
 close all;
 
 % Experimental signal
-[exp, Fs1] = audioread("grabaciones/NOAA15_5min.wav");
+[exp, Fs1] = audioread("grabaciones/NOAA18_20230103_220400Z_137915375Hz_AF.wav");
 % Theorical signal (from web)
-[teo, fs] = audioread("pruebas_wav/090729 1428 noaa-18.wav");
+[teo, Fs2] = audioread("pruebas_wav/090729 1428 noaa-18.wav");
 
 T1 = 1 / Fs1;
-T2 = 1 / fs;
+T2 = 1 / Fs2;
 t1 = (0:length(exp)-1) * T1;
 t2 = (0:length(teo)-1) * T2;
 
@@ -23,7 +23,7 @@ t2 = (0:length(teo)-1) * T2;
 % It is necessary to enhance the experimental signal in order to display the
 %APT image correctly (increasing the amplitude)
 exp = exp .* 20;
-%audiowrite("grabaciones/NOAA15_5min_amplificada.wav", exp, Fs1);
+audiowrite("grabaciones/NOAA18_amplificada.wav", exp, Fs1);
 
 % Signals in the time domain
 figure(1);
