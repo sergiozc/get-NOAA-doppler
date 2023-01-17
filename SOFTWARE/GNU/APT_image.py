@@ -90,8 +90,8 @@ class APT_image(gr.top_block, Qt.QWidget):
                 fractional_bw=0)
         self.qtgui_time_raster_sink_x_0 = qtgui.time_raster_sink_f(
             (samp_rate2 / 10),
-            900,
-            5000,
+            1000,
+            2080,
             [],
             [],
             'Image APT',
@@ -134,7 +134,7 @@ class APT_image(gr.top_block, Qt.QWidget):
                 200,
                 window.WIN_BLACKMAN,
                 6.76))
-        self.blocks_wavfile_source_0 = blocks.wavfile_source('C:\\Users\\Usuario\\Desktop\\SEI\\PROYECTO\\get-sat-project\\HARDWARE\\grabaciones\\NOAA18_amplificada.wav', True)
+        self.blocks_wavfile_source_0 = blocks.wavfile_source('C:\\Users\\Usuario\\Desktop\\SEI\\PROYECTO\\get-sat-project\\HARDWARE\\grabaciones\\NOAA15_5min_amplificada.wav', True)
         self.blocks_null_source_0 = blocks.null_source(gr.sizeof_float*1)
         self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
         self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
