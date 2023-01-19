@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=25mm,
+ right=25mm,
+ top=18mm,
+ bottom=19mm,
+ }
+ \usepackage{graphicx}
+ \usepackage{titling}
+ \usepackage{eurosym}
+\usepackage{lipsum}  
+\usepackage{cmbright}
+\usepackage{listings}
+
+
+\input{portada/portada}
+
+ \title{Diseño de un sistema de captación de señales satélites NOAA con corrección de efecto Doppler.}
+\author{Andrés Biedma, Javier Lobato, Sergio Zapata}
+\date{Enero 2023}
+ 
+ \usepackage{fancyhdr}
+\fancypagestyle{plain}{%  the preset of fancyhdr 
+    \fancyhf{} % clear all header and footer fields
+   % \fancyfoot[R]{\includegraphics[width=2cm]{UGR_LOGO.png}}
+   % \fancyfoot[L]{\thedate}
+    \fancyhead[L]{MUIT - Sistemas Electrónicos Integrados}
+    \fancyhead[R]{\theauthor}
+}
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 1em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title \par}%
+    \vskip 1em%
+    %{\large \@date}%
+  \end{center}%
+  \par
+  \vskip 1em}
+\makeatother
+
+
+
+\begin{document}
+
+\maketitle
+
+\noindent\begin{tabular}{@{}ll}
+    Estudiante & \theauthor\\
+    Profesor & Javier Díaz Alonso \\
+\end{tabular}
+
+
+\section{Introducción}
+
+\section{Distribución del proyecto}
+
+
+\section{Hardware}
+
+	\subsection{Antena}
+	\subsection{RTL-SDR}
+
+\section{Software}
+
+	\subsection{Diagrama de flujo en GNU Radio}
+	\subsection{Efecto Doppler}
+
+\section{Resultados}
+
+\section{Dificultades en la realización del proyecto}
+
+\section{Conclusiones y líneas futuras}
+ 
+
+
+
+\end{document}
