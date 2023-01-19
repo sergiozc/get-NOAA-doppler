@@ -64,7 +64,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [496, 176.0]
+    coordinate: [544, 104.0]
     rotation: 0
     state: true
 - name: audio_sink_0
@@ -81,7 +81,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [296, 232.0]
+    coordinate: [232, 224.0]
     rotation: 0
     state: true
 - name: blocks_complex_to_mag_0
@@ -113,7 +113,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 384.0]
+    coordinate: [296, 352.0]
     rotation: 0
     state: true
 - name: blocks_multiply_xx_0
@@ -150,7 +150,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [232, 544.0]
+    coordinate: [120, 472.0]
     rotation: 0
     state: true
 - name: low_pass_filter_0
@@ -212,7 +212,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [72, 344.0]
+    coordinate: [48, 344.0]
     rotation: 0
     state: true
 - name: rational_resampler_xxx_0
@@ -232,7 +232,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [552, 372.0]
+    coordinate: [528, 332.0]
     rotation: 0
     state: true
 - name: samp_rate_audio

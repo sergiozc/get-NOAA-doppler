@@ -1,6 +1,7 @@
-\documentclass{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
+\usepackage{soul}
  \geometry{
  a4paper,
  total={170mm,257mm},
@@ -15,15 +16,9 @@
 \usepackage{lipsum}  
 \usepackage{cmbright}
 \usepackage{listings}
-
-
-\input{portada/portada}
-
- \title{Diseño de un sistema de captación de señales satélites NOAA con corrección de efecto Doppler.}
-\author{Andrés Biedma, Javier Lobato, Sergio Zapata}
-\date{Enero 2023}
+\usepackage[spanish]{babel}
  
- \usepackage{fancyhdr}
+\usepackage{fancyhdr}
 \fancypagestyle{plain}{%  the preset of fancyhdr 
     \fancyhf{} % clear all header and footer fields
    % \fancyfoot[R]{\includegraphics[width=2cm]{UGR_LOGO.png}}
@@ -31,31 +26,13 @@
     \fancyhead[L]{MUIT - Sistemas Electrónicos Integrados}
     \fancyhead[R]{\theauthor}
 }
-\makeatletter
-\def\@maketitle{%
-  \newpage
-  \null
-  \vskip 1em%
-  \begin{center}%
-  \let \footnote \thanks
-    {\LARGE \@title \par}%
-    \vskip 1em%
-    %{\large \@date}%
-  \end{center}%
-  \par
-  \vskip 1em}
-\makeatother
 
 
 
 \begin{document}
 
-\maketitle
+\input{portada/portada}
 
-\noindent\begin{tabular}{@{}ll}
-    Estudiante & \theauthor\\
-    Profesor & Javier Díaz Alonso \\
-\end{tabular}
 
 
 \section{Introducción}
@@ -71,6 +48,21 @@
 \section{Software}
 
 	\subsection{Diagrama de flujo en GNU Radio}
+	Con el propósito de procesar la señal recibida del RTL-SDR a tiempo real se ha creado un diagrama de bloques en GNU Radio. Los pasos a realizar en el procesamiento de la señal se han realizado teniendo en cuenta el estándar APT y son los siguientes:
+	\begin{enumerate}
+	\item Filtrado paso baja y decimado
+	\item Demodulación FM
+	\item Remuestreo a la frecuencia de audio
+	\item Demodulación AM y construcción de la imagen
+	\end{enumerate}
+	
+	\begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 17cm]{imagenes/diagrama_flujo_completo.JPG}
+ \caption{Diagrama de flujo}
+ \label{diagrama_completo}
+ \end{figure}	
+	
 	\subsection{Efecto Doppler}
 
 \section{Resultados}

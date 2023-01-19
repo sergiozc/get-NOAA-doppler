@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  19 JAN 2023 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  19 JAN 2023 19:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2021-11-22>
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
-(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count183
 \c@section=\count184
@@ -54,7 +54,18 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@dimlist=\toks19
 
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
-))
+)) (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks20
+\SOUL@lasttoken=\toks21
+\SOUL@cmds=\toks22
+\SOUL@buffer=\toks23
+\SOUL@token=\toks24
+\SOUL@spaceskip=\skip49
+\SOUL@ttwidth=\dimen147
+\SOUL@uldp=\dimen148
+\SOUL@ulht=\dimen149
+)
 
 Package geometry Warning: Over-specification in `h'-direction.
     `width' (483.69684pt) is ignored.
@@ -82,14 +93,14 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 ef
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen147
-\Gin@req@width=\dimen148
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
 )
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip49
-\thanksmargin=\skip50
-\droptitle=\skip51
+\thanksmarkwidth=\skip50
+\thanksmargin=\skip51
+\droptitle=\skip52
 )
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/eurosym\eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
@@ -186,35 +197,87 @@ LaTeX Font Info:    Trying to load font information for OT1+cmbr on input line
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/cmbright\ot1cmbr.fd
 File: ot1cmbr.fd 2005/04/13 v8.1 (WaS)
 ))
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count198
+\lst@gtempboxa=\box52
+\lst@token=\toks25
+\lst@length=\count199
+\lst@currlwidth=\dimen152
+\lst@column=\count266
+\lst@pos=\count267
+\lst@lostspace=\dimen153
+\lst@width=\dimen154
+\lst@newlines=\count268
+\lst@lineno=\count269
+\lst@maxwidth=\dimen155
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count270
+\lst@skipnumbers=\count271
+\lst@framebox=\box53
+)
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2021/11/29 3.67 The Babel package
+\babel@savecnt=\count272
+\U@D=\dimen156
+\l@unhyphenated=\language79
+
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count273
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish
+.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks26
+\es@quotdepth=\count274
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
-\f@nch@headwidth=\skip52
-\f@nch@O@elh=\skip53
-\f@nch@O@erh=\skip54
-\f@nch@O@olh=\skip55
-\f@nch@O@orh=\skip56
-\f@nch@O@elf=\skip57
-\f@nch@O@erf=\skip58
-\f@nch@O@olf=\skip59
-\f@nch@O@orf=\skip60
-) (Memoria.aux)
+\f@nch@headwidth=\skip53
+\f@nch@O@elh=\skip54
+\f@nch@O@erh=\skip55
+\f@nch@O@olh=\skip56
+\f@nch@O@orh=\skip57
+\f@nch@O@elf=\skip58
+\f@nch@O@erf=\skip59
+\f@nch@O@olf=\skip60
+\f@nch@O@orf=\skip61
+) (Memoria.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+)
 \openout1 = `Memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -235,12 +298,12 @@ LaTeX Font Info:    ... okay on input line 47.
 * \topmargin=-58.05504pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -254,17 +317,17 @@ LaTeX Font Info:    ... okay on input line 47.
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count198
-\scratchdimen=\dimen149
-\scratchbox=\box52
-\nofMPsegments=\count199
-\nofMParguments=\count266
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count267
-\MPscratchDim=\dimen150
-\MPnumerator=\count268
-\makeMPintoPDFobject=\count269
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count275
+\scratchdimen=\dimen157
+\scratchbox=\box54
+\nofMPsegments=\count276
+\nofMParguments=\count277
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count278
+\MPscratchDim=\dimen158
+\MPnumerator=\count279
+\makeMPintoPDFobject=\count280
+\everyMPtoPDFconversion=\toks28
 )
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -276,57 +339,91 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 .cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for OML+cmbrm on input line
- 51.
+\c@lstlisting=\count281
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
+ (portada/portada.tex
+\centeroffset=\skip62
+<imagenes/logo_ugr.jpg, id=1, 329.73187pt x 112.16907pt>
+File: imagenes/logo_ugr.jpg Graphic file (type jpg)
+<use imagenes/logo_ugr.jpg>
+Package pdftex.def Info: imagenes/logo_ugr.jpg  used on input line 12.
+(pdftex.def)             Requested size: 409.71692pt x 139.38257pt.
 
+
+LaTeX Font Warning: Font shape `OT1/cmbr/m/sc' undefined
+(Font)              using `OT1/cmbr/m/n' instead on input line 14.
+
+LaTeX Font Info:    Font shape `OT1/cmbr/b/n' in size <17.28> not available
+(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `OT1/cmbr/b/n' in size <12> not available
+(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 21.
+LaTeX Font Info:    Trying to load font information for OML+cmbrm on input line
+ 22.
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/cmbright\omlcmbrm.fd
 File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    Trying to load font information for OMS+cmbrs on input line
- 51.
+ 22.
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/cmbright\omscmbrs.fd
 File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 51.
+(Font)              <10.95> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 51.
+(Font)              <8> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 22.
+LaTeX Font Info:    Font shape `OT1/cmbr/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 28.
+<imagenes/etsiit_logo.png, id=2, 110.814pt x 40.4712pt>
+File: imagenes/etsiit_logo.png Graphic file (type png)
+<use imagenes/etsiit_logo.png>
+Package pdftex.def Info: imagenes/etsiit_logo.png  used on input line 31.
+(pdftex.def)             Requested size: 136.57462pt x 49.87993pt.
+[1
+
+{C:/Users/Usuario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./imagenes
+/logo_ugr.jpg> <./imagenes/etsiit_logo.png>])
 LaTeX Font Info:    Font shape `OT1/cmbr/b/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 56.
-No file Memoria.toc.
-\tf@toc=\write3
-\openout3 = `Memoria.toc'.
+(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 38.
+<imagenes/diagrama_flujo_completo.JPG, id=14, 1099.7085pt x 466.1415pt>
+File: imagenes/diagrama_flujo_completo.JPG Graphic file (type jpg)
+<use imagenes/diagrama_flujo_completo.JPG>
+Package pdftex.def Info: imagenes/diagrama_flujo_completo.JPG  used on input li
+ne 61.
+(pdftex.def)             Requested size: 483.69684pt x 205.02464pt.
 
-LaTeX Font Info:    Font shape `OT1/cmbr/b/n' in size <12> not available
-(Font)              Font shape `OT1/cmbr/bx/n' tried instead on input line 65.
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 61--62
+ [][] 
+ []
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+[1 <./imagenes/diagrama_flujo_completo.JPG>] (Memoria.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+)
 
-(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-[1{C:/Users/Usuario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
-
-]
-(Memoria.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 2739 strings out of 478659
- 50075 string characters out of 2844972
- 436289 words of memory out of 3000000
- 20830 multiletter control sequences out of 15000+600000
- 407683 words of font info for 41 fonts, out of 8000000 for 9000
+ 5672 strings out of 478659
+ 95445 string characters out of 2844972
+ 496303 words of memory out of 3000000
+ 23715 multiletter control sequences out of 15000+600000
+ 408886 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,77p,242b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/public/c
-mbright/dpi720\cmbrbx10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljf
-our/public/cmbright/dpi864\cmbrbx10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\
-fonts/pk/ljfour/public/cmbright/dpi600\cmbr17.pk> <C:\Users\Usuario\AppData\Loc
-al\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi600\cmbr10.pk>
-Output written on Memoria.pdf (1 page, 43722 bytes).
+ 68i,6n,77p,289b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi86
+4\cmbrbx10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm
+bright/dpi657\cmbr10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour
+/public/cmbright/dpi657\cmbrbx10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/public/cmbright/dpi720\cmbrbx10.pk> <C:\Users\Usuario\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi1037\cmbrbx10.pk> <C:\Users\Usuario
+\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi864\cmbr10.pk>
+Output written on Memoria.pdf (2 pages, 221258 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
+ 212 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
