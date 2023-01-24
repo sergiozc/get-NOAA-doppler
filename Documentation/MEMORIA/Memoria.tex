@@ -17,6 +17,7 @@
 \usepackage{cmbright}
 \usepackage{listings}
 \usepackage[spanish]{babel}
+\usepackage{hyperref}
  
 \usepackage{fancyhdr}
 \fancypagestyle{plain}{%  the preset of fancyhdr 
@@ -33,9 +34,12 @@
 
 \input{portada/portada}
 
-
+\tableofcontents
+\newpage
 
 \section{Introducción}
+	\subsection{Estándar APT}
+	\subsection{Problema del efecto Doppler}
 
 \section{Distribución del proyecto}
 
@@ -48,6 +52,30 @@
 \section{Software}
 
 	\subsection{Programa Gpredict}
+	Se ha utilizado como herramienta de apoyo el programa \textit{Gpredict}. Es un programa que llega a proporcionar información sobre una gran cantidad de satélites, así como su órbita, velocidad y frecuencia a la que emiten, tiempo en función de la posición...
+	
+	Es necesario definir primero una estación baso. En el caso de este proyecto, se han definido las coordenadas de Granada, España. Una vez definida la estación base, se seleccionan los satélites a los que les quieres realizar el seguimiento. En este caso serán los satélites NOAA activos (NOAA-18, NOAA-19 y NOAA-15). La interfaz del programa con la estación base y los satélites definidos se muestra en la \textit{Figura \ref{gpredict}}.
+	
+	\begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 17cm]{imagenes/Gpredict_NOAA.JPG}
+ \caption{Gpredict satélites NOAA}
+ \label{gpredict}
+ \end{figure}
+ 
+ En la parte inferior de la captura de pantalla se puede visualizar la posición en coordenadas del satélite y otros datos como la velocidad, altitud, fase, elevación y hasta una aproximación del efecto Doppler en unidades de frecuencia.
+ 
+ Más información sobre cada satélite se puede consultar mediante click derecho en el satélite en cuestión. Es de interés la información de \textit{Future Passes}, la cual ayuda a saber a qué momento del día va a pasar el satélite cerca de nuestra ubicación de la estación base.
+
+	\begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 9cm]{imagenes/future_passes.JPG}
+ \caption{Trayectoria NOAA-19}
+ \label{trayectoria}
+ \end{figure}
+ 
+ 
+  Dentro de esta misma opción, se puede visualizar gráficamente la trayectoria del satélite, como se observa en la \textit{Figura \ref{trayectoria}}. Esta representación es de gran ayuda para saber el tiempo óptimo a la hora de captar la señal. Con los datos proporcionados por \textit{Gpredict}, se ha logrado en este proyecto captar las señales de los satélites NOAA para los tiempos previstos, por lo que es de gran utilidad.
 
 	\subsection{Diagrama de flujo en GNU Radio}
 	Con el propósito de procesar la señal recibida del RTL-SDR a tiempo real se ha creado un diagrama de bloques en GNU Radio. Los pasos a realizar en el procesamiento de la señal se han realizado teniendo en cuenta el estándar APT y son los siguientes:
@@ -70,7 +98,7 @@
  \begin{figure}[hbtp]
  \centering
  \includegraphics[width = 17cm]{imagenes/APT_hier.JPG}
- \caption{Bloque "WavToImg"}
+ \caption{Bloque WavToImg}
  \label{wavtoimage}
  \end{figure}
 
@@ -81,7 +109,7 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 
 
 
-	\subsection{Efecto Doppler}
+	\subsection{Corrección del efecto Doppler}
 
 \section{Resultados}
 
