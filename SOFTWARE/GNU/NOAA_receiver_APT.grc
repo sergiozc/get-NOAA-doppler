@@ -123,7 +123,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [2024, 696.0]
+    coordinate: [1728, 616.0]
     rotation: 0
     state: true
 - name: analog_wfm_rcv_0
@@ -140,7 +140,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1056, 604.0]
+    coordinate: [896, 612.0]
     rotation: 0
     state: true
 - name: audio_sink_0
@@ -157,7 +157,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1840, 376.0]
+    coordinate: [1608, 352.0]
     rotation: 0
     state: true
 - name: blocks_multiply_const_vxx_0
@@ -175,7 +175,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1552, 376.0]
+    coordinate: [1344, 352.0]
     rotation: 0
     state: true
 - name: blocks_multiply_const_vxx_1
@@ -193,7 +193,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1776, 528.0]
+    coordinate: [1616, 832.0]
     rotation: 0
     state: true
 - name: low_pass_filter_0
@@ -217,75 +217,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [520, 568.0]
-    rotation: 0
-    state: enabled
-- name: notebook_rf
-  id: qtgui_tab_widget
-  parameters:
-    alias: ''
-    comment: ''
-    gui_hint: notebook_top@0
-    label0: Spectrum
-    label1: Waterfall
-    label10: Tab 10
-    label11: Tab 11
-    label12: Tab 12
-    label13: Tab 13
-    label14: Tab 14
-    label15: Tab 15
-    label16: Tab 16
-    label17: Tab 17
-    label18: Tab 18
-    label19: Tab 19
-    label2: Tab 2
-    label3: Tab 3
-    label4: Tab 4
-    label5: Tab 5
-    label6: Tab 6
-    label7: Tab 7
-    label8: Tab 8
-    label9: Tab 9
-    num_tabs: '2'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [336, 20.0]
-    rotation: 0
-    state: enabled
-- name: notebook_top
-  id: qtgui_tab_widget
-  parameters:
-    alias: ''
-    comment: ''
-    gui_hint: 2, 0, 1, 2
-    label0: RF
-    label1: Audio
-    label10: Tab 10
-    label11: Tab 11
-    label12: Tab 12
-    label13: Tab 13
-    label14: Tab 14
-    label15: Tab 15
-    label16: Tab 16
-    label17: Tab 17
-    label18: Tab 18
-    label19: Tab 19
-    label2: ''
-    label3: Tab 3
-    label4: Tab 4
-    label5: Tab 5
-    label6: Tab 6
-    label7: Tab 7
-    label8: Tab 8
-    label9: Tab 9
-    num_tabs: '2'
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [192, 20.0]
+    coordinate: [376, 568.0]
     rotation: 0
     state: enabled
 - name: qtgui_freq_sink_x_0
@@ -323,7 +255,7 @@ blocks:
     fftsize: '1024'
     freqhalf: 'True'
     grid: 'True'
-    gui_hint: notebook_rf@0
+    gui_hint: ''
     label: Relative Gain
     label1: ''
     label10: ''
@@ -366,7 +298,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [536, 272.0]
+    coordinate: [440, 256.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_raster_sink_x_0
@@ -429,7 +361,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [2296, 668.0]
+    coordinate: [2000, 484.0]
     rotation: 0
     state: true
 - name: qtgui_waterfall_sink_x_0
@@ -464,7 +396,7 @@ blocks:
     fftsize: '1024'
     freqhalf: 'True'
     grid: 'False'
-    gui_hint: notebook_rf@1
+    gui_hint: ''
     int_max: '-20'
     int_min: '-80'
     label1: ''
@@ -490,7 +422,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [536, 400.0]
+    coordinate: [464, 400.0]
     rotation: 0
     state: enabled
 - name: rational_resampler_xxx_0
@@ -510,7 +442,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [760, 588.0]
+    coordinate: [656, 596.0]
     rotation: 0
     state: enabled
 - name: rational_resampler_xxx_1
@@ -530,7 +462,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1312, 588.0]
+    coordinate: [1136, 596.0]
     rotation: 0
     state: true
 - name: rational_resampler_xxx_2
@@ -550,7 +482,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1552, 804.0]
+    coordinate: [1360, 804.0]
     rotation: 0
     state: true
 - name: rtlsdr_source_0
@@ -907,7 +839,75 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [80, 408.0]
+    coordinate: [72, 296.0]
+    rotation: 0
+    state: enabled
+- name: spectrum1
+  id: qtgui_tab_widget
+  parameters:
+    alias: ''
+    comment: ''
+    gui_hint: ''
+    label0: Spectrum
+    label1: Waterfall
+    label10: Tab 10
+    label11: Tab 11
+    label12: Tab 12
+    label13: Tab 13
+    label14: Tab 14
+    label15: Tab 15
+    label16: Tab 16
+    label17: Tab 17
+    label18: Tab 18
+    label19: Tab 19
+    label2: Tab 2
+    label3: Tab 3
+    label4: Tab 4
+    label5: Tab 5
+    label6: Tab 6
+    label7: Tab 7
+    label8: Tab 8
+    label9: Tab 9
+    num_tabs: '2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [336, 20.0]
+    rotation: 0
+    state: enabled
+- name: spectrum2
+  id: qtgui_tab_widget
+  parameters:
+    alias: ''
+    comment: ''
+    gui_hint: 2, 0, 1, 2
+    label0: RF
+    label1: Audio
+    label10: Tab 10
+    label11: Tab 11
+    label12: Tab 12
+    label13: Tab 13
+    label14: Tab 14
+    label15: Tab 15
+    label16: Tab 16
+    label17: Tab 17
+    label18: Tab 18
+    label19: Tab 19
+    label2: ''
+    label3: Tab 3
+    label4: Tab 4
+    label5: Tab 5
+    label6: Tab 6
+    label7: Tab 7
+    label8: Tab 8
+    label9: Tab 9
+    num_tabs: '2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [192, 20.0]
     rotation: 0
     state: enabled
 

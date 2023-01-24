@@ -47,6 +47,8 @@
 
 \section{Software}
 
+	\subsection{Programa Gpredict}
+
 	\subsection{Diagrama de flujo en GNU Radio}
 	Con el propósito de procesar la señal recibida del RTL-SDR a tiempo real se ha creado un diagrama de bloques en GNU Radio. Los pasos a realizar en el procesamiento de la señal se han realizado teniendo en cuenta el estándar APT y son los siguientes:
 	\begin{enumerate}
@@ -61,8 +63,24 @@
  \includegraphics[width = 17cm]{imagenes/diagrama_flujo_completo.JPG}
  \caption{Diagrama de flujo}
  \label{diagrama_completo}
- \end{figure}	
+ \end{figure}
+ 
+ En la \textit{Figura \ref{diagrama_completo}} se aprecia el diagrama de flujo completo. Después de obtener la señal de audio a la frecuencia de $11.025 kHz$, se llega a un bloque jerárquico llamado \textit{WavToImg} el cual realiza la correspondiente conversión de señal de audio a imagen APT. El interior de este bloque se muestra en la \textit{Figura \ref{wavtoimage}}.
+ 
+ \begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 17cm]{imagenes/APT_hier.JPG}
+ \caption{Bloque "WavToImg"}
+ \label{wavtoimage}
+ \end{figure}
+
+El procedimiento se basa en una demodulación AM teniendo en cuenta que la información APT de interés se encuentra en una subportadora de $2.4 kHz$. 
+	Según el estándar, se recomienda hacer un remuestreo a una frecuenciad e $100 kHz$ antes de hacer la demodulación. Para llevar la subportadora a banda base se ha utilizado un coseno a una frecuencia de $-2.4 kHz$ y se ha hecho un filtrado posterior.
 	
+La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestra la imagen por pantalla a tiempo real.
+
+
+
 	\subsection{Efecto Doppler}
 
 \section{Resultados}

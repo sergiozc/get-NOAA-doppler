@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  19 JAN 2023 19:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  24 JAN 2023 18:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -398,7 +398,20 @@ Overfull \hbox (28.45273pt too wide) in paragraph at lines 61--62
  [][] 
  []
 
-[1 <./imagenes/diagrama_flujo_completo.JPG>] (Memoria.aux
+LaTeX Font Info:    Font shape `OT1/cmbr/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/cmbr/m/sl' tried instead on input line 66.
+<imagenes/APT_hier.JPG, id=15, 860.61525pt x 308.95425pt>
+File: imagenes/APT_hier.JPG Graphic file (type jpg)
+<use imagenes/APT_hier.JPG>
+Package pdftex.def Info: imagenes/APT_hier.JPG  used on input line 70.
+(pdftex.def)             Requested size: 483.69684pt x 173.6449pt.
+
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 70--71
+ [][] 
+ []
+
+[1 <./imagenes/diagrama_flujo_completo.JPG>] [2 <./imagenes/APT_hier.JPG>]
+(Memoria.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
@@ -407,23 +420,27 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5672 strings out of 478659
- 95445 string characters out of 2844972
- 496303 words of memory out of 3000000
- 23715 multiletter control sequences out of 15000+600000
- 408886 words of font info for 45 fonts, out of 8000000 for 9000
+ 5694 strings out of 478659
+ 95823 string characters out of 2844972
+ 498311 words of memory out of 3000000
+ 23735 multiletter control sequences out of 15000+600000
+ 409238 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,6n,77p,289b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi86
-4\cmbrbx10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm
-bright/dpi657\cmbr10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour
-/public/cmbright/dpi657\cmbrbx10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/public/cmbright/dpi720\cmbrbx10.pk> <C:\Users\Usuario\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi1037\cmbrbx10.pk> <C:\Users\Usuario
-\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi864\cmbr10.pk>
-Output written on Memoria.pdf (2 pages, 221258 bytes).
+ 68i,6n,77p,414b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi65
+7\cmbrsy10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cm
+bright/dpi657\cmbrmi10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/public/cmbright/dpi657\cmbrsl10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\f
+onts/pk/ljfour/public/cmbright/dpi864\cmbrbx10.pk> <C:\Users\Usuario\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi657\cmbr10.pk> <C:\Users\Usuario\
+AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi657\cmbrbx10.pk> <C:\Us
+ers\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dpi720\cmbrbx1
+0.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cmbright/dp
+i1037\cmbrbx10.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/publi
+c/cmbright/dpi864\cmbr10.pk>
+Output written on Memoria.pdf (3 pages, 311339 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
+ 251 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
