@@ -6,10 +6,10 @@
 \contentsline {section}{\numberline {3}Hardware}{2}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Antena}{2}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}RTL-SDR}{2}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Software}{2}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Programa Gpredict}{2}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Diagrama de flujo en GNU Radio}{3}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Corrección del efecto Doppler}{5}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Resultados}{5}{section.5}%
-\contentsline {section}{\numberline {6}Dificultades en la realización del proyecto}{5}{section.6}%
-\contentsline {section}{\numberline {7}Conclusiones y líneas futuras}{5}{section.7}%
+\contentsline {section}{\numberline {4}Software}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Programa Gpredict}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Diagrama de flujo en GNU Radio}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Corrección del efecto Doppler}{6}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Resultados}{6}{section.5}%
+\contentsline {section}{\numberline {6}Dificultades en la realización del proyecto}{6}{section.6}%
+\contentsline {section}{\numberline {7}Conclusiones y líneas futuras}{7}{section.7}%

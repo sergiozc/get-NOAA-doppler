@@ -1,7 +1,8 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,openright,12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{soul}
+\usepackage{mathptmx}
  \geometry{
  a4paper,
  total={170mm,257mm},
@@ -14,10 +15,12 @@
  \usepackage{titling}
  \usepackage{eurosym}
 \usepackage{lipsum}  
-\usepackage{cmbright}
 \usepackage{listings}
 \usepackage[spanish]{babel}
 \usepackage{hyperref}
+
+\usepackage{caption}
+\usepackage{subcaption}
  
 \usepackage{fancyhdr}
 \fancypagestyle{plain}{%  the preset of fancyhdr 
@@ -48,7 +51,37 @@
 
 	\subsection{Antena}
 	\subsection{RTL-SDR}
+	Las siglas SDR (Software Defined Radio) en un sistema de comunicación hacen referencia a la implementación de componentes (tradicionalmente en hardware) por software. En la \textit{Figura \ref{SDR}} se ejemplifica el comportamiento de un SDR.
+	
+ \begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 12cm]{imagenes/sdr.jpg}
+ \caption{Software Defined Radio}
+ \label{SDR}
+ \end{figure}
 
+Directamente se muestrea y se genera la señal en radio frecuencia (RF). Se consigue eliminar la inclusión de componentes en una frecuencia intermedia y se gana en flexibilidad, ya que todo el procedimiento se realiza en el dominio digital. También se obtiene una información más precisa al eliminar posibles mezcladores.
+
+	 En concreto, el dispositivo RTL-SDR es un tipo de radio definida por software a la que se incorpora el chip ''RTL832U''. Este dispositivo es capaz de proporcionar las partes real y compleja de la señal en banda base, pudiendo abarcar gran parte del espectro de radio frecuencia. El sintonizador interno cubre un ancho de banda desde los 25 MHz hasta casi los 2 MHz. La frecuencia máxima de muestreo en este caso se sitúa en $2.4 MHz$.
+	 
+	 \begin{figure}[!tbp]
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth, height=5cm]{imagenes/inner_RTL.JPG}
+    \caption{Interior RTL-SDR}
+    \label{inner_RTL}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth, height=5cm]{imagenes/rtl.JPG}
+    \caption{RTL-SDR utilizado}
+    \label{rtl}
+  \end{subfigure}
+  \caption{Esquema RTL-SDR}
+\end{figure}
+
+Este tipo de dispositivos fueron pensados primeramente como receptores DVB-T para la televisión, pero su gran versatilidad ha dado lugar a diferentes usos en FM, AM e incluso GPS.
+El RTL-SDR utilizado en el proyecto se muestra en la \textit{Figura \ref{rtl}} y su interior en la \textit{Figura \ref{inner_RTL}.} 
+\newpage
 \section{Software}
 
 	\subsection{Programa Gpredict}
@@ -58,7 +91,7 @@
 	
 	\begin{figure}[hbtp]
  \centering
- \includegraphics[width = 17cm]{imagenes/Gpredict_NOAA.JPG}
+ \includegraphics[width = 16cm]{imagenes/Gpredict_NOAA.JPG}
  \caption{Gpredict satélites NOAA}
  \label{gpredict}
  \end{figure}
@@ -81,10 +114,60 @@
 	Con el propósito de procesar la señal recibida del RTL-SDR a tiempo real se ha creado un diagrama de bloques en GNU Radio. Los pasos a realizar en el procesamiento de la señal se han realizado teniendo en cuenta el estándar APT y son los siguientes:
 	\begin{enumerate}
 	\item Filtrado paso baja y decimado
+	
+		\begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 12cm]{imagenes/primer_paso.JPG}
+ \caption{Filtrado y decimado}
+ \label{filtardo_decimado}
+ \end{figure}
+ 
+ El bloque de ''RTL-SDR Source'' capta la señal directamente del dispositivo, con una tasa de muestreo de $2.4 MHz$, la frecuencia central la del satélite deseado y una ganancia en RF bastante alta (unos 35-40 dB).
+ Se filtra paso baja con una frecuencia de corte poco restrictiva de $20 kHz$ para eliminar contribuciones ruidosas, ya que debido al efecto doppler, la frecuencia central de la señal del satélite podría variar y si se posee un ancho de banda restrictivo parte de la información podría perderse. Posteriormente se remuestrea la señal para trabajar a $96 kHz$.
+
+Los bloques restantes no mencionados corresponden a \textit{GUI }, es decir, el espectro de la señal mostrado por pantalla.
+ 
+ 
+ 
 	\item Demodulación FM
-	\item Remuestreo a la frecuencia de audio
+	
+		\begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 12cm]{imagenes/wbfm.JPG}
+ \caption{Demodulación FM}
+ \label{wbfm}
+ \end{figure}
+ 
+ Para demodular en FM simplemente se ha utilizado el bloque \textit{WBFM} el cual demodula la señal FM de banda ancha de entrada. Una vez con la señal demodulada, se adapta la frecuencia de muestreo a una típica de audio.	
+	
 	\item Demodulación AM y construcción de la imagen
+	
+		\begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 12cm]{imagenes/apt_blocks.JPG}
+ \caption{Demodulación AM}
+ \label{apt_blocks}
+ \end{figure}
+	
+	
+Después de obtener la señal de audio a la frecuencia de $11.025 kHz$, se llega a un bloque jerárquico llamado \textit{WavToImg} el cual realiza la correspondiente conversión de señal de audio a imagen APT. El interior de este bloque se muestra en la \textit{Figura \ref{wavtoimage}}.
+
+ \begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 17cm]{imagenes/APT_hier.JPG}
+ \caption{Bloque WavToImg}
+ \label{wavtoimage}
+ \end{figure}	
+ 
+ El procedimiento se basa en una demodulación AM teniendo en cuenta que la información APT de interés se encuentra en una subportadora de $2.4 kHz$. 
+	Según el estándar, se recomienda hacer un remuestreo a una frecuencias e $100 kHz$ antes de hacer la demodulación. Para llevar la subportadora a banda base se ha utilizado un coseno a una frecuencia de $-2.4 kHz$ y se ha hecho un filtrado posterior.
+	
+La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestra la imagen por pantalla a tiempo real.
+	
+	
 	\end{enumerate}
+	
+	 En la \textit{Figura \ref{diagrama_completo}} se aprecia el diagrama de flujo completo.
 	
 	\begin{figure}[hbtp]
  \centering
@@ -92,20 +175,7 @@
  \caption{Diagrama de flujo}
  \label{diagrama_completo}
  \end{figure}
- 
- En la \textit{Figura \ref{diagrama_completo}} se aprecia el diagrama de flujo completo. Después de obtener la señal de audio a la frecuencia de $11.025 kHz$, se llega a un bloque jerárquico llamado \textit{WavToImg} el cual realiza la correspondiente conversión de señal de audio a imagen APT. El interior de este bloque se muestra en la \textit{Figura \ref{wavtoimage}}.
- 
- \begin{figure}[hbtp]
- \centering
- \includegraphics[width = 17cm]{imagenes/APT_hier.JPG}
- \caption{Bloque WavToImg}
- \label{wavtoimage}
- \end{figure}
 
-El procedimiento se basa en una demodulación AM teniendo en cuenta que la información APT de interés se encuentra en una subportadora de $2.4 kHz$. 
-	Según el estándar, se recomienda hacer un remuestreo a una frecuenciad e $100 kHz$ antes de hacer la demodulación. Para llevar la subportadora a banda base se ha utilizado un coseno a una frecuencia de $-2.4 kHz$ y se ha hecho un filtrado posterior.
-	
-La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestra la imagen por pantalla a tiempo real.
 
 
 
@@ -115,8 +185,15 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 
 \section{Dificultades en la realización del proyecto}
 
+\newpage
 \section{Conclusiones y líneas futuras}
- 
+
+Este proyecto se ha realizado durante dos meses y con una disponibilidad temporal de los integrantes limitada. A pesar de ello, se ha logrado avanzar relativamente rápido y se han logrado unos buenos resultados. Ha sido un proyecto con poco presupuesto, por lo que, seguramente, invirtiendo en una antena con mejores prestaciones o la incorporación de un empotrado hubiera mejorado notablemente los resultados.
+Ha sido un proyecto bastante completo, ya que se ha profundizado en diseño de antenas, a la hora de construir la antena de tipo dipolo en V y en el procesado de señal con la parte de radio definida por software. Además, los objetivos iniciales del proyecto se han abarcado sin problemas, ya que se ha logrado captar correctamente múltiples señales de satélites NOAA convirtiendo estas a imágenes perfectamente visibles, consiguiendo una corrección del efecto Doppler muy precisa.
+
+Como futuras mejoras, se propone la construcción de una antena con polarización circular, ya que esta es independiente de la orientación y no haría falta un factor externo para optimizar la captación de la señal a medida que el satélite se desplaza. 
+Otra mejora sería la inclusión de un sistema empotrado conectado al RTL-SDR. De esta manera, mediante alguna orden externa, se podría captar la señal sin la necesidad de tener conectado un hardware como puede ser el ordenador.
+Respecto a la corrección del efecto doppler, se ha propuesto una vía alternativa mediante la regresión lineal, la cual no depende de datos como la velocidad del satélite. Sin embargo, esta corrección que se ha realizado se realiza de forma asíncrona, por lo que una nueva mejora sería implementar una corrección del efecto doppler a tiempo real. De esta nueva forma serán necesarios datos como la velocidad del satélite en todo momento y la debida conexión a un software de seguimiento de satélites a tiempo real como puede ser \textit{Gpredict}.
 
 
 
