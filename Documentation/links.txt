@@ -25,6 +25,9 @@ https://github.com/SpinStabilized/noaa_weather_radio
 ARTÍCULO APT NOAA
 https://users.utcluj.ro/~atn/papers/ATN_2_2013_6.pdf
 
+PAPER regresión lineal:
+S. -S. Lin and Y. -Z. Song, "A Doppler Effect Correction Method for APT Weather Satellite Image Reception," 2021
+
 NOAA decoder AM demod GNU radio
 http://www.site2241.net/december2020.htm
 
