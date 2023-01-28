@@ -3,7 +3,7 @@ close all;
 clc;
 
 Fs1 = 60e3;
-filename = 'data_full.raw';
+filename = 'C:\Users\javil\Desktop\MASTER\SAC\P4\data_full.raw';
 fid = fopen(filename,'rb');
 xFM = fread(fid, inf, 'single');
 xFM = xFM(1:2:end) + 1i*xFM(2:2:end);
