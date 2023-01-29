@@ -48,7 +48,7 @@
 	
 	El estándar APT es un sistema analógico de tranmisión de imágenes, introducido en la década de 1960 para su uso en satélites de meteorología. El objetivo del estándar era permitir a los usuarios recibir imágenes meteorológicas usando estaciones de bajo coste. 
 	
-	La información transmitida está compuesta por dos canales, información de sincronización y telemetría, dispuesta en líneas horizontales de 2080 píxeles. La siguiente figura ilustra la disposición de las imágenes:
+	La información transmitida está compuesta por dos canales de imágenes, información de sincronización y telemetría, dispuestas en líneas horizontales de 2080 píxeles. La siguiente figura ilustra la disposición de las imágenes:
 	
 	\begin{figure}[hbtp]
  \centering
@@ -58,11 +58,13 @@
  \end{figure}
 
 
-	En concreto, para los satélites NOAA, las imágenes cuentan con una resolución espacial de 4 km/píxel, tomando imágenes del espectro visible e infrarrojo. La información de la imagen se modula AM con 256 niveles de amplitud, para luego modularse en FM en una portadora en la banda de 137 MHz. Esta señal es difundida de manera ininterrumpida por los satélites.
+	En concreto, para los satélites NOAA, las imágenes cuentan con una resolución espacial de 4 km/píxel, tomando imágenes del espectro visible e infrarrojo. La información de la imagen se modula AM con 256 niveles de amplitud, para luego modularse en FM en una portadora en la banda de 137 MHz. Esta decisión de modulación permite que con un receptor sencillo se puedan obetener las imágenes que transmite el satélite. La señal es difundida de manera ininterrumpida.
 	
 	
 	
 	\subsection{Efecto Doppler}
+
+	El efecto Doppler es un fenómeno consistente en la variación de frecuencia observada por un receptor debido a un movimiento relativo entre emisor y receptor. Para la casuística de satélite-estación receptora, se tiene que el receptor se encuentra estático, y existe cierta velocidad relativa al acercarse y alejarse el satélite al receptor. La consecuencia de este movimiento relativo se traduce en una variación de la frecuencia aparente recibida conforme a la nominal. Este desplazamiento de frecuencia tampoco es constante, ya que la velocidad del satélite con respecto a la estación receptora  no es constante (aunque la velocidad orbital si lo sea). En la demodulación FM se puede hacer frente a este desplazamiento de frecuencia, ya que en el proceso de demodulación es común utilizar elementos como los PLL(Phase-Locked-Loop), que anulan estos efectos. Sin embargo, en la señal AM que contiene la información de la imagen, este efecto sigue presente, y se traduce en una imagen con un aspecto 'doblado', debido a la variación en frecuencia que modifica la longitud efectiva de cada línea. En este proyecto se propondrá un método para la corrección a posteriori de este efecto en las imágenes.
 
 \section{Distribución del proyecto}
 
@@ -200,6 +202,37 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 
 
 	\subsection{Corrección del efecto Doppler}
+
+	Para la corrección del efecto Doppler que afecta a la imagen se pueden llevar a cabo dos aproximaciones distintas: en tiempo real y a posteriori:
+	
+	\begin{itemize}
+	
+	\item \textbf{En tiempo real:} Para realizar una corrección en tiempo real del efecto Doppler se debe contar con información en tiempo real de la órbita del satélite. Conociendo su posición, dirección y velocidad (así como la posición del receptor, asumiéndolo estático) se puede obtener fácilmente la variación de frecuencia causada por el efecto Doppler. El único problema de esta aproximación es que se tienen que exportar en tiempo real los datos de la órbita de una aplicación de observación a la aplicación que se utilice para el procesamiento de la señal. Considerábamos que esta opción no era la idónea, por lo que nos centramos en una aproximación a posteriori.
+	
+	\item \textbf{A posteriori:} Bajo este esquema, se obtiene una señal afectada por el efecto Doppler, y se le aplica un algoritmo que elimina dicho efecto. Este ha sido el método elegido para este proyecto.
+	
+	\subsection{Método propuesto} 
+	
+	Utilizando un método a posteriori, se puede corregir el efecto Doppler de cualquier imagen APT, con independencia del momento en el que se tomó la imagen y sin necesidad de contar con la información exacta de la órbita del satélite en el momento de paso. Se ha implementado un algoritmo en Matlab que lleva a cabo una corrección. Su funcionamiento está basado en la interpolación / decimado de las líneas de la imagen, en base a la información aportada por el estándar APT. La descripción del algoritmo:
+
+\begin{itemize}
+
+	\item Se realiza un filtrado de la señal AM para eliminar posibles componentes indeseadas. La señal se sobremuestrea para que la corrección del efecto Doppler pueda realizarse con una precisión 'sub-píxel' lo que nos dará los mejores resultados.
+	
+	\item Se crea el pulso de sincronización del primer canal de la imagen, con el que se practica la correlación con la señal recibida. El resultado de esta función de correlación nos dará una serie de picos que nos indicarán el comienzo de cada línea.
+	
+	\item Se analiza cada línea en un bucle, en la que se compara la longitud real de cada línea con la longitud que debería tener de acuerdo con el estándar (2080 píxeles). Si la longitud es la esperada no se realiza ninguna operación, si la longitud es menor o mayor de la esperada, se practica una interpolación o un decimado, respectivamente. Con este método, todas las longitudes de las líneas pasan a ser iguales, con un comienzo y un final equivalente. De esta manera se elimina el efecto sobre la imagen del efecto Doppler. La imagen se decima a su tamaño original y se representa.
+	
+
+
+
+
+\end{itemize}
+	
+
+	
+	
+	\end{itemize}
 
 \section{Resultados}
 
