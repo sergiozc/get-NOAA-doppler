@@ -41,8 +41,28 @@
 \newpage
 
 \section{Introducción}
+
+	El objetivo 	de este proyecto es el diseño de un sistema completo de recepción de imágenes de satélites NOAA. El sistema incluye la especificación y fabricación de una antena adaptada a la naturaleza de la señal que se desea recibir, así como el diseño del software que permita tanto la demodulación y obtención de la imagen como la corrección del efecto Doppler sobre la misma. En los siguientes apartados se realizará un análisis de los distintos apartados del proyecto.
+	
 	\subsection{Estándar APT}
-	\subsection{Problema del efecto Doppler}
+	
+	El estándar APT es un sistema analógico de tranmisión de imágenes, introducido en la década de 1960 para su uso en satélites de meteorología. El objetivo del estándar era permitir a los usuarios recibir imágenes meteorológicas usando estaciones de bajo coste. 
+	
+	La información transmitida está compuesta por dos canales, información de sincronización y telemetría, dispuesta en líneas horizontales de 2080 píxeles. La siguiente figura ilustra la disposición de las imágenes:
+	
+	\begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 16cm]{imagenes/APT_frame.gif}
+ \caption{Esquema del estándar APT}
+ \label{APT}
+ \end{figure}
+
+
+	En concreto, para los satélites NOAA, las imágenes cuentan con una resolución espacial de 4 km/píxel, tomando imágenes del espectro visible e infrarrojo. La información de la imagen se modula AM con 256 niveles de amplitud, para luego modularse en FM en una portadora en la banda de 137 MHz. Esta señal es difundida de manera ininterrumpida por los satélites.
+	
+	
+	
+	\subsection{Efecto Doppler}
 
 \section{Distribución del proyecto}
 
