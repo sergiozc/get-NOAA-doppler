@@ -18,6 +18,7 @@
 \usepackage{listings}
 \usepackage[spanish]{babel}
 \usepackage{hyperref}
+\usepackage{amsmath}
 
 \usepackage{caption}
 \usepackage{subcaption}
@@ -67,11 +68,102 @@
 	El efecto Doppler es un fenómeno consistente en la variación de frecuencia observada por un receptor debido a un movimiento relativo entre emisor y receptor. Para la casuística de satélite-estación receptora, se tiene que el receptor se encuentra estático, y existe cierta velocidad relativa al acercarse y alejarse el satélite al receptor. La consecuencia de este movimiento relativo se traduce en una variación de la frecuencia aparente recibida conforme a la nominal. Este desplazamiento de frecuencia tampoco es constante, ya que la velocidad del satélite con respecto a la estación receptora  no es constante (aunque la velocidad orbital si lo sea). En la demodulación FM se puede hacer frente a este desplazamiento de frecuencia, ya que en el proceso de demodulación es común utilizar elementos como los PLL(Phase-Locked-Loop), que anulan estos efectos. Sin embargo, en la señal AM que contiene la información de la imagen, este efecto sigue presente, y se traduce en una imagen con un aspecto 'doblado', debido a la variación en frecuencia que modifica la longitud efectiva de cada línea. En este proyecto se propondrá un método para la corrección a posteriori de este efecto en las imágenes.
 
 \section{Distribución del proyecto}
+El proyecto se ha realizado durante los meses de Diciembre del año 2022 y Enero del año 2023. La distribución del mismo se muestra en la Fig.[\ref{Fig:Gantt}].
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{imagenes/DiagramaGantt.png}
+    \caption{Diagrama de Gantt en el que se recoge la distribución del proyecto.}
+    \label{Fig:Gantt}
+\end{figure}
 
 
 \section{Hardware}
+Desde el punto de vista del Hardware se ha utilizado una antena tipo dipolo en V y un RTL-SDR, ambos se describen a continuación.
+	\subsection{Antena dipolo en V}
+ Puesto que se pretende escuchar las imágenes APT transmitida por satélites NOAA, se ha de diseñar una antena que opere en la banda de frecuencia de los mismos, véase Tabla [\ref{Tab1:NOOA_frecuencias}]. 
+ \begin{table}[h!]
+\centering
 
-	\subsection{Antena}
+\begin{tabular}{|c|c|} 
+\hline
+\textbf{Satélite} & \begin{tabular}[c]{@{}c@{}}\textbf{Frecuencia}\\\textbf{de emisión [MHz]}\end{tabular}  \\ 
+\hline
+NOAA - 15           & 137.630                                                                                 \\ 
+\hline
+NOAA - 18           & 137.9125                                                                                \\ 
+\hline
+NOAA - 19           & 137.100                                                                                 \\
+\hline
+\end{tabular}
+\caption{Tabla resumen con las frecuencias de emisión APT de cada satélite NOAA.}
+\label{Tab1:NOOA_frecuencias}
+\end{table}
+Además, se ha de tener en cuenta que los satélites transmiten señales RHCP. Si se pretende obtener el mejor rendimiento, es recomendable que la antena seleccionada esté polarizada de acuerdo a RHCP. Dentro de la literatura se encuentran antenas como: antena helicoidal end-fire (\textit{helix antena}), antena helicoidal back-fire (\textit{QFH helix}) o dipolos cruzados, mientras que rara vez se encuentran antenas tipo espiral o \textit{lindelblad} antena, pese a que a priori se pensase en utilizar antenas circulares. Esto se debe a que construir \textit{DIY} antenas con una relación axial igual a 1 (o polarización circular perfecta) resulta realmente difícil y cualquier pequeño error implica: una polarización elíptica y una reducción del ancho de banda de trabajo. 
+Es por ello que para elegir la antena que ideal: aquella que se adecuase a nuestras habilidades de construcción y garantizase la recepción de señales procedentes de satélites NOAA, se realizó un análisis de la polarización cruzada, véase Tabla [\ref{Tab2:x_pol}].
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|} 
+\hline
+\textbf{Polarización} & \textbf{Vertical} & \textbf{Horizontal} & \textbf{RHCP} & \textbf{LHCP}  \\ 
+\hline
+\textbf{Vertical}     & 0dB               & -20dB               & -3dB          & -3dB           \\ 
+\hline
+\textbf{Horizontal}   & -20dB             & 0dB                 & -3dB          & -3dB           \\ 
+\hline
+\textbf{RHCP}         & -3dB              & -3dB                & 0dB           & -20dB          \\ 
+\hline
+\textbf{LHCP}         & -3dB              & -3dB                & -20dB         & 0dB            \\
+\hline
+\end{tabular}
+\caption{Tabla resumen de la relación de polarización cruzada entre las polarizaciones: vertical, horizontal, LHCP y RHCP.}
+\label{Tab2:x_pol}
+\end{table}
+
+La tabla \ref{Tab2:x_pol} reafirma lo sensible que puede resultar un error que varíe la polarización en la construcción de la antena. Es por ello que se decidió sacrificar unos cuantos dB y optar por un diseño de antena más simple con polarización lineal. Entre las múltiples ventajas de las antenas de polarización lineal (vertical u horizontal) destacan: la facilidad del diseño, presentan patrones de radiación omnidireccionales, es fácil conseguir una impedancia de antena ($Z_{ant}=50\Omega$), etc.
+El detalle que ha hecho que se opte por la polarización horizontal es que la inmensa mayoría de servicios de radio-televisión utilizan polarización vertical y de acuerdo a [\ref{Tab2:x_pol}] esta se ve reducida en -20dB frente a la polarización horizontal. \\
+
+Teniendo en consideración todos los factores mencionados hasta ahora se decidió construir una \textbf{antena tipo dipolo en V} con polarización horizontal que  cumple con las especificaciones requeridas: fácil de construir y funcional en la ancho de banda de trabajo requerido, el único problema que presentan los dipolos son los nulos laterales, sin embargo, este inconveniente se soluciona doblando el dipolo un ángulo $\theta=120º$ de forma que el diagrama de radiación del conjunto de la antena en dirección ortogonal a la misma se vea reforzado. Un modelo 3D de la misma se muestra en Fig.[\ref{fig:modelo3D}], mientras que en Fig.[\ref{fig:topdown}] se muestra la perspectiva top-down.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\linewidth]{imagenes/ModeloAntena.png}
+    \caption{Modelo 3D de la antena dipolo en V construida.}
+    \label{fig:modelo3D}
+\end{figure}
+
+
+
+Una vez establecida el tipo de antena y la banda de frecuencia de trabajo, se han calculado las medidas de los brazos de la antena de la siguiente forma:
+
+\begin{gather}
+        L(m) = 147/f(MHz) \\
+       L(m) = 147/137.5 \\
+       L(m) = 1.068m = 106.8cm
+\end{gather}
+
+Por tanto, cada uno de los brazos ha de medir: 
+\begin{equation*}
+    L = 53.4cm
+\end{equation*}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{imagenes/PerspectivaTopDown.png}
+    \caption{Perspectiva top-down de la antena dipolo en V construida.}
+    \label{fig:topdown}
+\end{figure}
+
+Una vez se construyó la antena, se hizo uso de un Vector Network Analyzer (VNA) para comprobar a través del parámetro S11 que la antena se comportaba de acuerdo a lo esperado. Los resultados tras la caracterización de dicho parámetro se muestra en la Fig. [\ref{fig:S11}].
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\linewidth]{imagenes/S11.png}
+    \caption{Módulo del parámetro S11 medido.}
+    \label{fig:S11}
+\end{figure}
+
+
 	\subsection{RTL-SDR}
 	Las siglas SDR (Software Defined Radio) en un sistema de comunicación hacen referencia a la implementación de componentes (tradicionalmente en hardware) por software. En la \textit{Figura \ref{SDR}} se ejemplifica el comportamiento de un SDR.
 	
@@ -238,6 +330,26 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 
 \section{Dificultades en la realización del proyecto}
 
+Durante la realización del proyecto se han enfrentado diversas dificultades que se detallan a continuación:
+\begin{itemize}
+    \item \textbf{Punto de partida}: Ninguno de los tres integrantes del grupo había trabajado o tenía experiencia previa en nada relacionado con comunicaciones satélites. Empezar a trabajar supuso una barrera de entrada importante, con la intención de superarla nos pusimos en contacto con: D. José Antonio Pérez Carrasco, profesor de la Universidad de Sevilla que nos proporcionó material con el que comenzar.
+    \item \textbf{GNU-Radio y SDR}: Pese a que conocíamos ambas tecnologías, no habíamos desarrollado ningún proyecto utilizándolas y familiarizarnos con ellas requirió tiempo.
+    \item \textbf{Diseño y montaje de la antena}: Tal y como se ha desarrollado anteriormente, la elección de la antena no fue una tarea fácil y aún menos lo fue el montaje. Tuvimos varios problemas a la hora de construirla:
+    \begin{itemize}
+        \item Compra de conectores SMA erróneos.
+        \item Rotura del montaje: la antena sufrió un pequeño accidente que hizo que tuvierámos que volver a conectar el cable coaxial a un nuevo SMA del que en aquel momento no se disponía.
+    \end{itemize}
+    \item \textbf{Recepción y procesamiento de las señales}: Tuvimos que fracasar en muchos intentos hasta que fuimos capaces de recibir la señal de un satélite con un nivel de calidad suficiente. Entre los muchos factores que influyeron el proceso de recepción se destacan:
+    \begin{itemize}
+        \item Orientación de la antena: La antena ha de estar orientada Sur - Norte. 
+        \item Tiempo de medida: Por cada medida se requiere de media unos 10 min.
+        \item No siempre existe LOS.
+        \item Errores de sincronización entre SharpSDR y GPredict.
+        \item Manejo del estándar APT: nunca antes se había trabajado con un estándar analógico. APT es un estándar antiguo y localizarlo en la web no fue fácil.
+    \end{itemize}
+    \item \textbf{Planificación}: Debido a festivos este año los proyectos algo más tarde y debido a una cuestión organizativa de horario no se han podido disfrutar de 2h de clase seguidas para trabajar en los mismos lo cual ha dificultado el proceso.
+\end{itemize}
+
 \newpage
 \section{Conclusiones y líneas futuras}
 
@@ -248,6 +360,36 @@ Como futuras mejoras, se propone la construcción de una antena con polarizació
 Otra mejora sería la inclusión de un sistema empotrado conectado al RTL-SDR. De esta manera, mediante alguna orden externa, se podría captar la señal sin la necesidad de tener conectado un hardware como puede ser el ordenador.
 Respecto a la corrección del efecto doppler, se ha propuesto una vía alternativa mediante la regresión lineal, la cual no depende de datos como la velocidad del satélite. Sin embargo, esta corrección que se ha realizado se realiza de forma asíncrona, por lo que una nueva mejora sería implementar una corrección del efecto doppler a tiempo real. De esta nueva forma serán necesarios datos como la velocidad del satélite en todo momento y la debida conexión a un software de seguimiento de satélites a tiempo real como puede ser \textit{Gpredict}.
 
+\section{Presupuesto}
+Una vez completado el proyecto, el presupuesto asociado al mismo se detalla en la Tabla [\ref{Tab3:Presupuesto}].
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|} 
+\hline
+\textbf{Material}          & \textbf{Unidades} & \textbf{Coste/Unidad}            \\ 
+\hline
+\textbf{Aluminio}          & 2m                & 0.81\euro{}/m   \\ 
+\hline
+\textbf{Juntas}            & 1                 & 0.30\euro{}     \\ 
+\hline
+\textbf{Estructura Antena} & 1                 & 5\euro{}        \\ 
+\hline
+\textbf{SDR}               & 1                 & 45.98\euro{}    \\ 
+\hline
+\textbf{Conectores SMA}    & 10                & 1.1\euro{}/SMA  \\ 
+\hline
+\textbf{Cable Coaxial}     & 3m                & 1.2\euro{}/m    \\ 
+\hline
+\textbf{Ordenador}               & 1                 & 800\euro{}    \\ 
+\hline
+\multicolumn{2}{|c|}{\textbf{Coste total}}              & 867.49\euro{}    \\
+\hline
+
+\end{tabular}
+\caption{Tabla resumen del presupuesto del proyecto.}
+\label{Tab3:Presupuesto}
+\end{table}
 
 
 \end{document}
