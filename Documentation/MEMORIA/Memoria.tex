@@ -55,7 +55,7 @@
  \centering
  \includegraphics[width = 10cm]{imagenes/APT_frame.JPG}
  \caption{Esquema del estándar APT}
- \label{APT}
+ \label{APT_FRAME}
  \end{figure}
 
 
@@ -305,7 +305,7 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 	
 	\subsection{Método propuesto} 
 	
-	Utilizando un método a posteriori, se puede corregir el efecto Doppler de cualquier imagen APT, con independencia del momento en el que se tomó la imagen y sin necesidad de contar con la información exacta de la órbita del satélite en el momento de paso. Se ha implementado un algoritmo en Matlab que lleva a cabo una corrección. Su funcionamiento está basado en la interpolación / decimado de las líneas de la imagen, en base a la información aportada por el estándar APT. La descripción del algoritmo:
+	Utilizando un método a posteriori, se puede corregir el efecto Doppler de cualquier imagen APT, con independencia del momento en el que se tomó la imagen y sin necesidad de contar con la información exacta de la órbita del satélite en el momento de paso. Se ha implementado un algoritmo en Matlab que lleva a cabo una corrección. Su funcionamiento está basado en la interpolación / decimado de las líneas de la imagen, en base a la información aportada por el estándar APT. El algoritmo parte de la señal AM, ya que la demodulación FM se realiza automáticamente en la aplicación de captura. La descripción del algoritmo:
 
 \begin{itemize}
 
@@ -328,26 +328,50 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 
 \section{Resultados}
 
+La implementación del método propuesto fue exitosa. Se consiguió demodular la información contenida en la imagen AM, así como corregir el efecto Doppler de la imagen de manera exitosa. Como referencia, se muestra a continuación la representación de la imagen tras la demodulación AM, sin utilizar los pulsos de sincronización y sin realizar la corrección del efecto Doppler:
+
+
+ \begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 17cm]{imagenes/APT_nosynch.png}
+ \caption{Representación de la imagen sin corrección del Efecto Doppler}
+ \label{apt_nosynch}
+ \end{figure}
+ 
+ Tras aplicarle a la imagen el algoritmo descrito en el apartado anterior, se consigue una corrección total del Efecto Doppler, así como un ajuste de la imagen al estándar APT, gracias a los pulsos de sincronización:
+
+ \begin{figure}[hbtp]
+ \centering
+ \includegraphics[width = 17cm]{imagenes/apt_corrected.png}
+ \caption{Representación de la imagen con corrección del Efecto Doppler}
+ \label{apt_corrected}
+ \end{figure}
+ 
+ Como se puede comprobar, las consecuencias del efecto Doppler han desaparecido por completo, y se consigue un ajuste conforme a lo que estipula el estándar en \ref{APT_FRAME}. Las líneas que no se han obtenido correctamente, se deben a errores en la antena o a una distancia excesiva entre satélite-receptor (cuando el satélite se encontraba cerca del horizonte la potencia recibida era mínima). Para la obtención de la señal con una SNR correcta con la antena diseñada, se debía mantener en todo momento una orientación adecuada a la zona de paso del satélite. Mantener esta orientación en todo momento resulta complicado, y da como resultado la pérdida de ciertas líneas. Al perder la situación del pulso de sincronización en   dichas líneas tiene como consecuencia la pérdida total de información de esa línea, ya que el algoritmo desconoce qué información corresponde a esa línea. La señal que se ve plasmada en las imágenes se obtuvo en una pasada del satélite NOAA-19. 
+ 	
+
+ 
+
 \section{Dificultades en la realización del proyecto}
 
 Durante la realización del proyecto se han enfrentado diversas dificultades que se detallan a continuación:
 \begin{itemize}
-    \item \textbf{Punto de partida}: Ninguno de los tres integrantes del grupo había trabajado o tenía experiencia previa en nada relacionado con comunicaciones satélites. Empezar a trabajar supuso una barrera de entrada importante, con la intención de superarla nos pusimos en contacto con: D. José Antonio Pérez Carrasco, profesor de la Universidad de Sevilla que nos proporcionó material con el que comenzar.
+
     \item \textbf{GNU-Radio y SDR}: Pese a que conocíamos ambas tecnologías, no habíamos desarrollado ningún proyecto utilizándolas y familiarizarnos con ellas requirió tiempo.
     \item \textbf{Diseño y montaje de la antena}: Tal y como se ha desarrollado anteriormente, la elección de la antena no fue una tarea fácil y aún menos lo fue el montaje. Tuvimos varios problemas a la hora de construirla:
     \begin{itemize}
-        \item Compra de conectores SMA erróneos.
+        \item Montaje inical de la antena. El proceso de conexión del cable coaxial a la antena en una disposición lo suficientemente robusta, así como el montaje del adaptador SMA se demostró un proceso más tedioso y complicado de lo que se pensó inicialmente. Se tuvieron que realizar soldaduras y reconstrucciones que no estaban en la planificación inicial del proyecto.
         \item Rotura del montaje: la antena sufrió un pequeño accidente que hizo que tuvierámos que volver a conectar el cable coaxial a un nuevo SMA del que en aquel momento no se disponía.
     \end{itemize}
-    \item \textbf{Recepción y procesamiento de las señales}: Tuvimos que fracasar en muchos intentos hasta que fuimos capaces de recibir la señal de un satélite con un nivel de calidad suficiente. Entre los muchos factores que influyeron el proceso de recepción se destacan:
+    \item \textbf{Recepción y procesamiento de las señales}: Obtener una señal con la calidad suficiente, fue un proceso que tuvo cierta curva de aprendizaje, ya que tuvimos numerosos intentos fallidos hasta que pudimos conseguir la configuración adecuada en recepción, así como la orientación y posición geográfica adecuada. Entre los muchos factores que influyeron el proceso de recepción se destacan:
     \begin{itemize}
-        \item Orientación de la antena: La antena ha de estar orientada Sur - Norte. 
-        \item Tiempo de medida: Por cada medida se requiere de media unos 10 min.
+    		\item Posición geográfica: Los primeros intentos de obtención de señal se hicieron en un lugar cercano a una casa, que, aunque con vistas prácticamente completas al cielo, no dio los resultados esperados. Acusamos estos errores a las posibles reflexiones que podían ocurrir con los edificios cercanos, así como la pérdida momentánea de LOS por obstáculos intermedios. Al cambiar la posición a un descampado sin edificios en decenas de metros de distancia, los resultados mejoraron notablemente.
+        \item Orientación de la antena: La antena ha de tener una orientación concreta con respecto al satélite en cada caso. Bajo nuestra experiencia comprobamos que no se podía mantener estática si se quería obtener correctamente la imagen. 
+        \item Tiempo de medida: Por cada medida se requieren de media unos 10 min en los que la orientación debe ser correcta y no debe haber obstáculo alguno entre satélite-receptor.
         \item No siempre existe LOS.
-        \item Errores de sincronización entre SharpSDR y GPredict.
-        \item Manejo del estándar APT: nunca antes se había trabajado con un estándar analógico. APT es un estándar antiguo y localizarlo en la web no fue fácil.
+        \item Configuración de SharpSDR: El ancho de banda de recepción era de extremada importancia para la obtención de una señal clara y sin ruido, debía ser lo más ajustada posible al ancho de banda original de la señal. Esto no era posible, ya que debido al efecto Doppler la frecuencia aparente iba desplazándose conforme el paso del satélite, y se podía llegar a perder información. Se llegó a un compromiso que llevó varios intentos hasta que se llegó al adecuado.
     \end{itemize}
-    \item \textbf{Planificación}: Debido a festivos este año los proyectos algo más tarde y debido a una cuestión organizativa de horario no se han podido disfrutar de 2h de clase seguidas para trabajar en los mismos lo cual ha dificultado el proceso.
+    
 \end{itemize}
 
 \newpage
@@ -357,8 +381,9 @@ Este proyecto se ha realizado durante dos meses y con una disponibilidad tempora
 Ha sido un proyecto bastante completo, ya que se ha profundizado en diseño de antenas, a la hora de construir la antena de tipo dipolo en V y en el procesado de señal con la parte de radio definida por software. Además, los objetivos iniciales del proyecto se han abarcado sin problemas, ya que se ha logrado captar correctamente múltiples señales de satélites NOAA convirtiendo estas a imágenes perfectamente visibles, consiguiendo una corrección del efecto Doppler muy precisa.
 
 Como futuras mejoras, se propone la construcción de una antena con polarización circular, ya que esta es independiente de la orientación y no haría falta un factor externo para optimizar la captación de la señal a medida que el satélite se desplaza. 
-Otra mejora sería la inclusión de un sistema empotrado conectado al RTL-SDR. De esta manera, mediante alguna orden externa, se podría captar la señal sin la necesidad de tener conectado un hardware como puede ser el ordenador.
-Respecto a la corrección del efecto doppler, se ha propuesto una vía alternativa mediante la regresión lineal, la cual no depende de datos como la velocidad del satélite. Sin embargo, esta corrección que se ha realizado se realiza de forma asíncrona, por lo que una nueva mejora sería implementar una corrección del efecto doppler a tiempo real. De esta nueva forma serán necesarios datos como la velocidad del satélite en todo momento y la debida conexión a un software de seguimiento de satélites a tiempo real como puede ser \textit{Gpredict}.
+Otra mejora sería la inclusión de un sistema empotrado conectado al RTL-SDR. De esta manera, mediante alguna orden externa, se podría captar la señal sin la necesidad de tener conectado un hardware como puede ser el ordenador. A nivel de hardware, la inclusión de un LNA (Low Noise Amplifier) sería interesante de cara a obtener la señal con mejores prestaciones.
+Respecto a la corrección del efecto doppler, se ha propuesto una vía alternativa mediante la interpolación-decimado, el cual no depende de datos como la velocidad del satélite. Sin embargo, esta corrección que se ha realizado se realiza de forma asíncrona, por lo que una nueva mejora sería implementar una corrección del efecto doppler a tiempo real. De esta nueva forma serán necesarios datos como la velocidad del satélite en todo momento y la debida conexión a un software de seguimiento de satélites a tiempo real como puede ser \textit{Gpredict}.
+La resolución de las imágenes obtenidas es limitada, debido a que en un estándar analógico como APT, la calidad máxima no es tan alta como la común a día de hoy, en el que cientos de satélites envían imágenes a color en alta resolución. Una vía de mejora podría consistir en la obtención de imágenes enviadas en formato digital de un satélite de meteorología, como la serie de satélites rusos METEOR-M2. Estas imágenes se pueden obtener de una manera relativamente similar, proporcionando una imagen a color y de mucha mayor resolución.
 
 \section{Presupuesto}
 Una vez completado el proyecto, el presupuesto asociado al mismo se detalla en la Tabla [\ref{Tab3:Presupuesto}].
