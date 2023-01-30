@@ -109,7 +109,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1176, 192.0]
+    coordinate: [1328, 120.0]
     rotation: 0
     state: true
 - name: blocks_float_to_complex_0
@@ -125,7 +125,25 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [336, 280.0]
+    coordinate: [520, 280.0]
+    rotation: 0
+    state: true
+- name: blocks_multiply_const_vxx_1
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '20'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [280, 320.0]
     rotation: 0
     state: true
 - name: blocks_multiply_xx_0
@@ -143,7 +161,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [808, 264.0]
+    coordinate: [976, 264.0]
     rotation: 0
     state: true
 - name: blocks_null_source_0
@@ -171,7 +189,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    file: C:\Users\Usuario\Desktop\SEI\PROYECTO\get-sat-project\HARDWARE\grabaciones\NOAA15_5min_amplificada.wav
+    file: C:\Users\Usuario\Desktop\SEI\PROYECTO\get-sat-project\HARDWARE\grabaciones\audio_antenaorig.wav
     maxoutbuf: '0'
     minoutbuf: '0'
     nchan: '1'
@@ -204,7 +222,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [976, 216.0]
+    coordinate: [1144, 216.0]
     rotation: 0
     state: true
 - name: qtgui_time_raster_sink_x_0
@@ -267,7 +285,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1288, 308.0]
+    coordinate: [1584, 268.0]
     rotation: 0
     state: true
 - name: rational_resampler_xxx_0
@@ -287,7 +305,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [560, 260.0]
+    coordinate: [720, 260.0]
     rotation: 0
     state: true
 
@@ -295,10 +313,11 @@ connections:
 - [analog_sig_source_x_0, '0', blocks_multiply_xx_0, '0']
 - [blocks_complex_to_mag_0, '0', qtgui_time_raster_sink_x_0, '0']
 - [blocks_float_to_complex_0, '0', rational_resampler_xxx_0, '0']
+- [blocks_multiply_const_vxx_1, '0', blocks_float_to_complex_0, '0']
 - [blocks_multiply_xx_0, '0', low_pass_filter_0, '0']
 - [blocks_null_source_0, '0', blocks_float_to_complex_0, '1']
 - [blocks_wavfile_source_0, '0', audio_sink_0, '0']
-- [blocks_wavfile_source_0, '0', blocks_float_to_complex_0, '0']
+- [blocks_wavfile_source_0, '0', blocks_multiply_const_vxx_1, '0']
 - [low_pass_filter_0, '0', blocks_complex_to_mag_0, '0']
 - [rational_resampler_xxx_0, '0', blocks_multiply_xx_0, '1']
 

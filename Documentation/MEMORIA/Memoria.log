@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  27 JAN 2023 20:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  30 JAN 2023 09:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -519,7 +519,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (portada/portada.tex
 \centeroffset=\skip63
-<imagenes/logo_ugr.jpg, id=59, 329.73187pt x 112.16907pt>
+<imagenes/logo_ugr.jpg, id=63, 329.73187pt x 112.16907pt>
 File: imagenes/logo_ugr.jpg Graphic file (type jpg)
 <use imagenes/logo_ugr.jpg>
 Package pdftex.def Info: imagenes/logo_ugr.jpg  used on input line 12.
@@ -554,7 +554,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 22.
-<imagenes/etsiit_logo.png, id=60, 110.814pt x 40.4712pt>
+<imagenes/etsiit_logo.png, id=64, 110.814pt x 40.4712pt>
 File: imagenes/etsiit_logo.png Graphic file (type png)
 <use imagenes/etsiit_logo.png>
 Package pdftex.def Info: imagenes/etsiit_logo.png  used on input line 31.
@@ -577,88 +577,104 @@ been already used, duplicate ignored
                    \relax 
 l.41 \newpage
               [1]
-<imagenes/sdr.jpg, id=89, 1935.23pt x 1003.75pt>
+<imagenes/APT_frame.JPG, id=93, 355.92975pt x 386.04225pt>
+File: imagenes/APT_frame.JPG Graphic file (type jpg)
+<use imagenes/APT_frame.JPG>
+Package pdftex.def Info: imagenes/APT_frame.JPG  used on input line 55.
+(pdftex.def)             Requested size: 284.52756pt x 308.61627pt.
+ [2 <./imagenes/APT_frame.JPG>]
+<imagenes/sdr.jpg, id=100, 1935.23pt x 1003.75pt>
 File: imagenes/sdr.jpg Graphic file (type jpg)
 <use imagenes/sdr.jpg>
-Package pdftex.def Info: imagenes/sdr.jpg  used on input line 58.
+Package pdftex.def Info: imagenes/sdr.jpg  used on input line 80.
 (pdftex.def)             Requested size: 341.43306pt x 177.08327pt.
-<imagenes/inner_RTL.JPG, id=90, 452.892pt x 192.11775pt>
+<imagenes/inner_RTL.JPG, id=101, 452.892pt x 192.11775pt>
 File: imagenes/inner_RTL.JPG Graphic file (type jpg)
 <use imagenes/inner_RTL.JPG>
-Package pdftex.def Info: imagenes/inner_RTL.JPG  used on input line 69.
+Package pdftex.def Info: imagenes/inner_RTL.JPG  used on input line 91.
 (pdftex.def)             Requested size: 223.06616pt x 142.2675pt.
-<imagenes/rtl.JPG, id=91, 2058.94218pt x 1531.97343pt>
+<imagenes/rtl.JPG, id=102, 2058.94218pt x 1531.97343pt>
 File: imagenes/rtl.JPG Graphic file (type jpg)
 <use imagenes/rtl.JPG>
-Package pdftex.def Info: imagenes/rtl.JPG  used on input line 75.
+Package pdftex.def Info: imagenes/rtl.JPG  used on input line 97.
 (pdftex.def)             Requested size: 223.05989pt x 142.24297pt.
- [2 <./imagenes/sdr.jpg>]
-<imagenes/Gpredict_NOAA.JPG, id=103, 1153.30875pt x 558.28575pt>
+ [3 <./imagenes/sdr.jpg>]
+<imagenes/Gpredict_NOAA.JPG, id=114, 1153.30875pt x 558.28575pt>
 File: imagenes/Gpredict_NOAA.JPG Graphic file (type jpg)
 <use imagenes/Gpredict_NOAA.JPG>
-Package pdftex.def Info: imagenes/Gpredict_NOAA.JPG  used on input line 94.
+Package pdftex.def Info: imagenes/Gpredict_NOAA.JPG  used on input line 116.
 (pdftex.def)             Requested size: 455.24408pt x 220.37137pt.
-<imagenes/future_passes.JPG, id=104, 251.13824pt x 246.9225pt>
+<imagenes/future_passes.JPG, id=115, 251.13824pt x 246.9225pt>
 File: imagenes/future_passes.JPG Graphic file (type jpg)
 <use imagenes/future_passes.JPG>
-Package pdftex.def Info: imagenes/future_passes.JPG  used on input line 105.
+Package pdftex.def Info: imagenes/future_passes.JPG  used on input line 127.
 (pdftex.def)             Requested size: 256.0748pt x 251.78601pt.
- [3 <./imagenes/inner_RTL.JPG> <./imagenes/rtl.JPG> <./imagenes/Gpredict_NOAA.J
-PG>]
-<imagenes/primer_paso.JPG, id=111, 498.06075pt x 319.79475pt>
+
+[4 <./imagenes/inner_RTL.JPG> <./imagenes/rtl.JPG> <./imagenes/Gpredict_NOAA.JP
+G>]
+<imagenes/primer_paso.JPG, id=122, 498.06075pt x 319.79475pt>
 File: imagenes/primer_paso.JPG Graphic file (type jpg)
 <use imagenes/primer_paso.JPG>
-Package pdftex.def Info: imagenes/primer_paso.JPG  used on input line 120.
+Package pdftex.def Info: imagenes/primer_paso.JPG  used on input line 142.
 (pdftex.def)             Requested size: 341.43306pt x 219.23862pt.
- [4 <./imagenes/future_passes.JPG> <./imagenes/primer_paso.JPG>]
-<imagenes/wbfm.JPG, id=119, 307.1475pt x 96.96225pt>
+ [5 <./imagenes/future_passes.JPG> <./imagenes/primer_paso.JPG>]
+<imagenes/wbfm.JPG, id=130, 307.1475pt x 96.96225pt>
 File: imagenes/wbfm.JPG Graphic file (type jpg)
 <use imagenes/wbfm.JPG>
-Package pdftex.def Info: imagenes/wbfm.JPG  used on input line 136.
+Package pdftex.def Info: imagenes/wbfm.JPG  used on input line 158.
 (pdftex.def)             Requested size: 341.43306pt x 107.7921pt.
-<imagenes/apt_blocks.JPG, id=120, 551.05875pt x 367.3725pt>
+<imagenes/apt_blocks.JPG, id=131, 551.05875pt x 367.3725pt>
 File: imagenes/apt_blocks.JPG Graphic file (type jpg)
 <use imagenes/apt_blocks.JPG>
-Package pdftex.def Info: imagenes/apt_blocks.JPG  used on input line 147.
+Package pdftex.def Info: imagenes/apt_blocks.JPG  used on input line 169.
 (pdftex.def)             Requested size: 341.43306pt x 227.62843pt.
-<imagenes/APT_hier.JPG, id=122, 860.61525pt x 308.95425pt>
+<imagenes/APT_hier.JPG, id=133, 860.61525pt x 308.95425pt>
 File: imagenes/APT_hier.JPG Graphic file (type jpg)
 <use imagenes/APT_hier.JPG>
-Package pdftex.def Info: imagenes/APT_hier.JPG  used on input line 157.
+Package pdftex.def Info: imagenes/APT_hier.JPG  used on input line 179.
 (pdftex.def)             Requested size: 483.69684pt x 173.6449pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 157--158
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 179--180
  [][] 
  []
 
-[5 <./imagenes/wbfm.JPG> <./imagenes/apt_blocks.JPG>]
-<imagenes/diagrama_flujo_completo.JPG, id=133, 1099.7085pt x 466.1415pt>
+[6 <./imagenes/wbfm.JPG> <./imagenes/apt_blocks.JPG>]
+<imagenes/diagrama_flujo_completo.JPG, id=145, 1099.7085pt x 466.1415pt>
 File: imagenes/diagrama_flujo_completo.JPG Graphic file (type jpg)
 <use imagenes/diagrama_flujo_completo.JPG>
 Package pdftex.def Info: imagenes/diagrama_flujo_completo.JPG  used on input li
-ne 174.
+ne 196.
 (pdftex.def)             Requested size: 483.69684pt x 205.02464pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 174--175
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 196--197
  [][] 
  []
 
-[6 <./imagenes/APT_hier.JPG> <./imagenes/diagrama_flujo_completo.JPG>] [7]
-(Memoria.aux
+[7 <./imagenes/APT_hier.JPG> <./imagenes/diagrama_flujo_completo.JPG>]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+20.
+
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+[8] [9] (Memoria.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Memoria.out' has not changed.
-(rerunfilecheck)             Checksum: CD0753A6F63DB93973A2BAA28CE64771;2107.
+(rerunfilecheck)             Checksum: 781FB78AAAAA8B5D7175CCA0EEB06912;2180.
  ) 
 Here is how much of TeX's memory you used:
- 14008 strings out of 478659
- 233233 string characters out of 2844972
- 630431 words of memory out of 3000000
- 31866 multiletter control sequences out of 15000+600000
- 430289 words of font info for 73 fonts, out of 8000000 for 9000
+ 14046 strings out of 478659
+ 233875 string characters out of 2844972
+ 632491 words of memory out of 3000000
+ 31895 multiletter control sequences out of 15000+600000
+ 430603 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,77p,592b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,8n,77p,1256b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<
 C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mmi10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
@@ -666,9 +682,9 @@ sfonts/cm/cmsy10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type
 1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on Memoria.pdf (8 pages, 1727456 bytes).
+Output written on Memoria.pdf (10 pages, 1814867 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
