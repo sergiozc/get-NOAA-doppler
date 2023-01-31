@@ -121,15 +121,7 @@ Lista_infrarojos = Lista_infrarojos + v_posiciones;
 Lista_visibles = Lista_visibles + v_posiciones;
 diff = Lista_infrarojos - Lista_visibles;
 
-%% Proxima clase.
-% Bucle for que recorra mAM_cutted cortandola a
-% partir del las diferecias entre lista_visibles - lista_infrarojos e
-% interpolar ese corte a 1040 muestras.
-
-% Afinar mediante un buffer la localizacion donde pueden encajar los picos
-% de correlacion de SYNCA y SYNCB de forma que el vector differencias no
-% tenga ningun elemento negativo. !!!!
-% 
+%%
 diff = Lista_infrarojos - Lista_visibles;
 new_size = 1040;
 M_interpolated_visible = zeros(Largo,Ancho/2);
@@ -156,7 +148,7 @@ M_total_interpolated = [M_interpolated_visible, M_interpolated_infrarrojo];
 Imagen_total = M_total_interpolated/max(max(abs(M_total_interpolated)))';
 figure()
 imshow(Imagen_total)
-%% Actividad 3: Decodificar algun valor de telemetria
+%% Decodificar algun valor de telemetria
 % Tomamos la muestra de telemetria que mejor calidad tiene, aquella que se
 % encuentra en el centro de la imagen, donde el efecto doppler es menor.
 

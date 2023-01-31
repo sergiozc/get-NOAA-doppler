@@ -134,7 +134,7 @@ class APT_image(gr.top_block, Qt.QWidget):
                 200,
                 window.WIN_BLACKMAN,
                 6.76))
-        self.blocks_wavfile_source_0 = blocks.wavfile_source('C:\\Users\\Usuario\\Desktop\\SEI\\PROYECTO\\get-sat-project\\HARDWARE\\grabaciones\\audio_antenaorig.wav', True)
+        self.blocks_wavfile_source_0 = blocks.wavfile_source('C:\\Users\\Usuario\\Desktop\\SEI\\PROYECTO\\get-sat-project\\HARDWARE\\grabaciones\\31_01_2023_NOAA19.wav', True)
         self.blocks_null_source_0 = blocks.null_source(gr.sizeof_float*1)
         self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_const_vxx_1 = blocks.multiply_const_ff(20)

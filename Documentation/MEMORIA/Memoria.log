@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  31 JAN 2023 12:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  31 JAN 2023 15:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -758,34 +758,34 @@ ne 303.
 <imagenes/31_01_nosynch.png, id=219, 866.48718pt x 598.48593pt>
 File: imagenes/31_01_nosynch.png Graphic file (type png)
 <use imagenes/31_01_nosynch.png>
-Package pdftex.def Info: imagenes/31_01_nosynch.png  used on input line 353.
+Package pdftex.def Info: imagenes/31_01_nosynch.png  used on input line 352.
 (pdftex.def)             Requested size: 369.88582pt x 255.48097pt.
 <imagenes/31_01_synch.png, id=220, 869.49844pt x 566.86781pt>
 File: imagenes/31_01_synch.png Graphic file (type png)
 <use imagenes/31_01_synch.png>
-Package pdftex.def Info: imagenes/31_01_synch.png  used on input line 362.
+Package pdftex.def Info: imagenes/31_01_synch.png  used on input line 361.
 (pdftex.def)             Requested size: 369.88582pt x 241.15349pt.
  [13 <./imagenes/31_01_nosynch.png> <./imagenes/31_01_synch.png>]
 <imagenes/noaa_19 pass 31_01.png, id=229, 247.42438pt x 209.78375pt>
 File: imagenes/noaa_19 pass 31_01.png Graphic file (type png)
 <use imagenes/noaa_19 pass 31_01.png>
 Package pdftex.def Info: imagenes/noaa_19 pass 31_01.png  used on input line 37
-1.
+0.
 (pdftex.def)             Requested size: 284.52756pt x 241.25902pt.
  [14 <./imagenes/noaa_19 pass 31_01.png>] [15] [16] [17]
-Underfull \hbox (badness 3396) in paragraph at lines 463--464
+Underfull \hbox (badness 3396) in paragraph at lines 462--463
 []\OT1/ptm/m/n/12 How it works. (n.d.). Com.Ar. Re-trie-ved Ja-nuary 31, 2023, 
 from https://noaa-
  []
 
 
-Underfull \hbox (badness 5504) in paragraph at lines 474--475
+Underfull \hbox (badness 5504) in paragraph at lines 473--474
 \OT1/ptm/m/n/12 1). Rtl-sdr.com. https://www.rtl-sdr.com/simple-noaameteor-weat
 her-satellite-antenna-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--478
+Underfull \hbox (badness 10000) in paragraph at lines 476--477
 []\OT1/ptm/m/n/12 Table of con-tents. (1989). Spa-ce Scien-ce Re-views, 50(3{4)
 .
  []
@@ -816,7 +816,7 @@ s/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Usuario/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Memoria.pdf (19 pages, 10415359 bytes).
+Output written on Memoria.pdf (19 pages, 10415040 bytes).
 PDF statistics:
  325 PDF objects out of 1000 (max. 8388607)
  77 named destinations out of 1000 (max. 500000)

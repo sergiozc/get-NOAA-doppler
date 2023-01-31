@@ -296,7 +296,7 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 	
 	\end{enumerate}
 	
-	 En la \textit{Figura \ref{diagrama_completo}} se aprecia el diagrama de flujo completo.
+	 En la Figura [\ref{diagrama_completo}] se aprecia el diagrama de flujo completo.
 	
 	\begin{figure}[hbtp]
  \centering
@@ -317,8 +317,9 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 	\item \textbf{En tiempo real:} Para realizar una corrección en tiempo real del efecto Doppler se debe contar con información en tiempo real de la órbita del satélite. Conociendo su posición, dirección y velocidad (así como la posición del receptor, asumiéndolo estático) se puede obtener fácilmente la variación de frecuencia causada por el efecto Doppler. El único problema de esta aproximación es que se tienen que exportar en tiempo real los datos de la órbita de una aplicación de observación a la aplicación que se utilice para el procesamiento de la señal. Considerábamos que esta opción no era la idónea, por lo que nos centramos en una aproximación a posteriori.
 	
 	\item \textbf{A posteriori:} Bajo este esquema, se obtiene una señal afectada por el efecto Doppler, y se le aplica un algoritmo que elimina dicho efecto. Este ha sido el método elegido para este proyecto.
+	\end{itemize}	
 	
-	\subsection{Método propuesto} 
+\subsection{Método propuesto} 
 	
 	Utilizando un método a posteriori, se puede corregir el efecto Doppler de cualquier imagen APT, con independencia del momento en el que se tomó la imagen y sin necesidad de contar con la información exacta de la órbita del satélite en el momento de paso. Se ha implementado un algoritmo en Matlab, basando su fundamento en \cite{7}, que lleva a cabo una corrección. Su funcionamiento está basado en la interpolación / decimado de las líneas de la imagen, en base a la información aportada por el estándar APT. El algoritmo parte de la señal AM, ya que la demodulación FM se realiza automáticamente en la aplicación de captura. La descripción del algoritmo:
 
@@ -338,8 +339,6 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 	
 
 	
-	
-	\end{itemize}
 
 \newpage
 
