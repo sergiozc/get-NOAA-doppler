@@ -180,7 +180,7 @@ En la siguiente imagen podemos comprobar el aspecto final de la antena, conectad
 
 
 	\subsection{RTL-SDR}
-	Las siglas SDR (Software Defined Radio) en un sistema de comunicación hacen referencia a la implementación de componentes (tradicionalmente en hardware) por software. En la \textit{Figura \ref{SDR}} se ejemplifica el comportamiento de un SDR.
+	Las siglas SDR (Software Defined Radio) en un sistema de comunicación hacen referencia a la implementación de componentes (tradicionalmente en hardware) por software. En la Figura [\ref{SDR}] se ejemplifica el comportamiento de un SDR.
 	
  \begin{figure}[hbtp]
  \centering
@@ -364,13 +364,13 @@ La implementación del método propuesto fue exitosa. Se consiguió demodular la
  \label{apt_corrected}
  \end{figure}
  
- Como se puede comprobar, las consecuencias del efecto Doppler han desaparecido por completo, y se consigue un ajuste conforme a lo que estipula el estándar en \ref{APT_FRAME}. Las líneas que no se han obtenido correctamente, se deben a errores en la antena o a una distancia excesiva entre satélite-receptor (cuando el satélite se encontraba cerca del horizonte la potencia recibida era mínima). Para la obtención de la señal con una SNR correcta con la antena diseñada, se debía mantener en todo momento una orientación adecuada a la zona de paso del satélite. Mantener esta orientación en todo momento resulta complicado, y da como resultado la pérdida de ciertas líneas. Al perder la situación del pulso de sincronización en   dichas líneas tiene como consecuencia la pérdida total de información de esa línea, ya que el algoritmo desconoce qué información corresponde a esa línea. La señal que se ve plasmada en las imágenes se obtuvo en una pasada del satélite NOAA-19. Como aspecto adicional, en la siguiente imagen se muestra el perfil de pasada del satélite. Como se puede comprobar, las condiciones eran bastante buenas, puesto que cuanto más cercano sea el paso con respecto a la  vertical del receptor, mayor será la potencia recibida.
+ Como se puede comprobar, las consecuencias del efecto Doppler han desaparecido por completo, y se consigue un ajuste conforme a lo que estipula el estándar en \ref{APT_FRAME}. Las líneas que no se han obtenido correctamente, se deben a errores en la antena o a una distancia excesiva entre satélite-receptor (cuando el satélite se encontraba cerca del horizonte la potencia recibida era mínima). Para la obtención de la señal con una SNR correcta con la antena diseñada, se debía mantener en todo momento una orientación adecuada a la zona de paso del satélite. Mantener esta orientación en todo momento resulta complicado, y da como resultado la pérdida de ciertas líneas. Al perder la situación del pulso de sincronización en   dichas líneas tiene como consecuencia la pérdida total de información de esa línea, ya que el algoritmo desconoce qué información corresponde a esa línea. La señal que se ve plasmada en las imágenes se obtuvo en una pasada del satélite NOAA-19. Como aspecto adicional, en la Figura [\ref{perfil-pasada}] se muestra el perfil de pasada del satélite. Como se puede comprobar, las condiciones eran bastante buenas, puesto que cuanto más cercano sea el paso con respecto a la  vertical del receptor, mayor será la potencia recibida.
  
   \begin{figure}[hbtp]
  \centering
  \includegraphics[width = 10cm]{imagenes/noaa_19 pass 31_01.png}
- \caption{Representación de la imagen con corrección del Efecto Doppler}
- \label{apt_corrected}
+ \caption{Perfil de pasada NOAA-19}
+ \label{perfil-pasada}
  \end{figure}
  
  

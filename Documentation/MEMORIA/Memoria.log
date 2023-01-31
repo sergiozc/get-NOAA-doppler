@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  31 JAN 2023 12:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  31 JAN 2023 12:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -475,10 +475,6 @@ LaTeX Warning: Unused global option(s):
 (Memoria.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
-
-
-LaTeX Warning: Label `apt_corrected' multiply defined.
-
 )
 \openout1 = `Memoria.aux'.
 
@@ -770,7 +766,7 @@ File: imagenes/31_01_synch.png Graphic file (type png)
 Package pdftex.def Info: imagenes/31_01_synch.png  used on input line 362.
 (pdftex.def)             Requested size: 369.88582pt x 241.15349pt.
  [13 <./imagenes/31_01_nosynch.png> <./imagenes/31_01_synch.png>]
-<imagenes/noaa_19 pass 31_01.png, id=228, 247.42438pt x 209.78375pt>
+<imagenes/noaa_19 pass 31_01.png, id=229, 247.42438pt x 209.78375pt>
 File: imagenes/noaa_19 pass 31_01.png Graphic file (type png)
 <use imagenes/noaa_19 pass 31_01.png>
 Package pdftex.def Info: imagenes/noaa_19 pass 31_01.png  used on input line 37
@@ -798,20 +794,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 477--478
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `Memoria.out' has not changed.
 (rerunfilecheck)             Checksum: 71DC48FBAFD9CBF047E574050463344B;2496.
  ) 
 Here is how much of TeX's memory you used:
- 14890 strings out of 478659
- 246420 string characters out of 2844972
- 652071 words of memory out of 3000000
- 32670 multiletter control sequences out of 15000+600000
+ 14891 strings out of 478659
+ 246435 string characters out of 2844972
+ 652090 words of memory out of 3000000
+ 32671 multiletter control sequences out of 15000+600000
  432584 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,16n,77p,1311b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,16n,77p,1323b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<
 C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mmi10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
@@ -823,9 +816,9 @@ s/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Usuario/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Memoria.pdf (19 pages, 10415292 bytes).
+Output written on Memoria.pdf (19 pages, 10415359 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
+ 325 PDF objects out of 1000 (max. 8388607)
  77 named destinations out of 1000 (max. 500000)
  250 words of extra memory for PDF output out of 10000 (max. 10000000)
 
