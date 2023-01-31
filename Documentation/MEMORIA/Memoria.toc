@@ -6,12 +6,14 @@
 \contentsline {section}{\numberline {3}Hardware}{3}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Antena dipolo en V}{3}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}RTL-SDR}{5}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Software}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Programa Gpredict}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Diagrama de flujo en GNU Radio}{7}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Corrección del efecto Doppler}{10}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Método propuesto}{11}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Resultados}{11}{section.5}%
-\contentsline {section}{\numberline {6}Dificultades en la realización del proyecto}{11}{section.6}%
-\contentsline {section}{\numberline {7}Conclusiones y líneas futuras}{13}{section.7}%
-\contentsline {section}{\numberline {8}Presupuesto}{13}{section.8}%
+\contentsline {section}{\numberline {4}Software}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Programa Gpredict}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Diagrama de flujo en GNU Radio}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Corrección del efecto Doppler}{12}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Método propuesto}{13}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Resultados}{13}{section.5}%
+\contentsline {section}{\numberline {6}Dificultades en la realización del proyecto}{15}{section.6}%
+\contentsline {section}{\numberline {7}Conclusión}{17}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Conclusiones}{17}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Líneas Futuras}{17}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Presupuesto}{17}{section.8}%

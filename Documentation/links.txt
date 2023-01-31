@@ -11,6 +11,12 @@ V-Dipole:
 https://www.rtl-sdr.com/simple-noaameteor-weather-satellite-antenna-137-mhz-v-dipole/
 https://www.dropbox.com/s/6fpfn2p9filc9ol/DIY%20137MHz%20WX-sat%20V-dipole%20antenna.pdf?dl=0
 
+APT WIKI:
+https://www.sigidwiki.com/wiki/Automatic_Picture_Transmission_(APT)
+
+APT-NOAA EXPLICACIÓN:
+https://noaa-apt.mbernardi.com.ar/how-it-works.html
+
 
 Video explicativo del diseñador: 
 https://youtu.be/kf8CytxePkU

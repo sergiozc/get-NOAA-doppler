@@ -77,6 +77,7 @@ El proyecto se ha realizado durante los meses de Diciembre del año 2022 y Enero
     \label{Fig:Gantt}
 \end{figure}
 
+Se ha desglosado el trabajo entre los tres integrantes del grupo de trabajo, realizando en paralelo tareas distintas, tanto de hardware como de software, y contribuyendo conjuntamente al objetivo común.
 
 \section{Hardware}
 Desde el punto de vista del Hardware se ha utilizado una antena tipo dipolo en V y un RTL-SDR, ambos se describen a continuación.
@@ -343,7 +344,7 @@ La implementación del método propuesto fue exitosa. Se consiguió demodular la
 
  \begin{figure}[hbtp]
  \centering
- \includegraphics[width = 17cm]{imagenes/31_01_nosynch.png}
+ \includegraphics[width = 15cm]{imagenes/31_01_nosynch.png}
  \caption{Representación de la imagen sin corrección del Efecto Doppler}
  \label{apt_nosynch}
  \end{figure}
@@ -352,7 +353,7 @@ La implementación del método propuesto fue exitosa. Se consiguió demodular la
 
  \begin{figure}[hbtp]
  \centering
- \includegraphics[width = 17cm]{imagenes/31_01_synch.png}
+ \includegraphics[width = 15cm]{imagenes/31_01_synch.png}
  \caption{Representación de la imagen con corrección del Efecto Doppler}
  \label{apt_corrected}
  \end{figure}
@@ -361,7 +362,7 @@ La implementación del método propuesto fue exitosa. Se consiguió demodular la
  
   \begin{figure}[hbtp]
  \centering
- \includegraphics[width = 17cm]{imagenes/noaa_19 pass 31_01.png}
+ \includegraphics[width = 10cm]{imagenes/noaa_19 pass 31_01.png}
  \caption{Representación de la imagen con corrección del Efecto Doppler}
  \label{apt_corrected}
  \end{figure}
@@ -394,10 +395,13 @@ Durante la realización del proyecto se han enfrentado diversas dificultades que
 \end{itemize}
 
 \newpage
-\section{Conclusiones y líneas futuras}
+\section{Conclusión}
 
+\subsection{Conclusiones}
 Este proyecto se ha realizado durante dos meses y con una disponibilidad temporal de los integrantes limitada. A pesar de ello, se ha logrado avanzar relativamente rápido y se han logrado unos buenos resultados. Ha sido un proyecto con poco presupuesto, por lo que, seguramente, invirtiendo en una antena con mejores prestaciones o la incorporación de un empotrado hubiera mejorado notablemente los resultados.
 Ha sido un proyecto bastante completo, ya que se ha profundizado en diseño de antenas, a la hora de construir la antena de tipo dipolo en V y en el procesado de señal con la parte de radio definida por software. Además, los objetivos iniciales del proyecto se han abarcado sin problemas, ya que se ha logrado captar correctamente múltiples señales de satélites NOAA convirtiendo estas a imágenes perfectamente visibles, consiguiendo una corrección del efecto Doppler muy precisa.
+
+\subsection{Líneas Futuras}
 
 Como futuras mejoras, se propone la construcción de una antena con polarización circular, ya que esta es independiente de la orientación y no haría falta un factor externo para optimizar la captación de la señal a medida que el satélite se desplaza. 
 Otra mejora sería la inclusión de un sistema empotrado conectado al RTL-SDR. De esta manera, mediante alguna orden externa, se podría captar la señal sin la necesidad de tener conectado un hardware como puede ser el ordenador. A nivel de hardware, la inclusión de un LNA (Low Noise Amplifier) sería interesante de cara a obtener la señal con mejores prestaciones.
@@ -434,6 +438,15 @@ Una vez completado el proyecto, el presupuesto asociado al mismo se detalla en l
 \caption{Tabla resumen del presupuesto del proyecto.}
 \label{Tab3:Presupuesto}
 \end{table}
+
+\begin{thebibliography}{1}
+
+
+\bibitem{tutorialArrays}McCowan, I. (2001). Microphone arrays: A tutorial. Queensland University, Australia, 1-38.
+
+
+\end{thebibliography}
+
 
 
 \end{document}
