@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  31 JAN 2023 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.14)  31 JAN 2023 12:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -415,6 +415,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
 )
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count297
+\float@exts=\toks32
+\float@box=\box56
+\@float@everytoks=\toks33
+\@floatcapt=\box57
+)
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
 
@@ -430,16 +438,17 @@ Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
 \caption@hangindent=\dimen177
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count297
-\c@continuedfloat=\count298
+\c@caption@flags=\count298
+\c@continuedfloat=\count299
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.st
 y
 Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
-\c@subfigure=\count299
-\c@subtable=\count300
+\c@subfigure=\count300
+\c@subtable=\count301
 )
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
@@ -455,7 +464,7 @@ rs
 \f@nch@O@orf=\skip65
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 3
-7.
+8.
  (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -473,24 +482,24 @@ LaTeX Warning: Label `apt_corrected' multiply defined.
 )
 \openout1 = `Memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -530,17 +539,17 @@ LaTeX Font Info:    ... okay on input line 37.
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count301
+\scratchcounter=\count302
 \scratchdimen=\dimen178
-\scratchbox=\box56
-\nofMPsegments=\count302
-\nofMParguments=\count303
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count304
+\scratchbox=\box58
+\nofMPsegments=\count303
+\nofMParguments=\count304
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count305
 \MPscratchDim=\dimen179
-\MPnumerator=\count305
-\makeMPintoPDFobject=\count306
-\everyMPtoPDFconversion=\toks33
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
+\everyMPtoPDFconversion=\toks35
 )
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -552,10 +561,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 .cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count307
-LaTeX Info: Redefining \. on input line 37.
-LaTeX Info: Redefining \% on input line 37.
-Package hyperref Info: Link coloring OFF on input line 37.
+\c@lstlisting=\count308
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
+Package hyperref Info: Link coloring OFF on input line 38.
 
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -567,11 +576,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 itlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count308
+\c@section@level=\count309
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+LaTeX Info: Redefining \nameref on input line 38.
  (Memoria.out) (Memoria.out)
 \@outlinefile=\write3
 \openout3 = `Memoria.out'.
@@ -636,167 +645,156 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.42 \newpage
+l.43 \newpage
               [1]
 <imagenes/APT_frame.JPG, id=108, 355.92975pt x 386.04225pt>
 File: imagenes/APT_frame.JPG Graphic file (type jpg)
 <use imagenes/APT_frame.JPG>
-Package pdftex.def Info: imagenes/APT_frame.JPG  used on input line 56.
+Package pdftex.def Info: imagenes/APT_frame.JPG  used on input line 57.
 (pdftex.def)             Requested size: 284.52756pt x 308.61627pt.
  [2 <./imagenes/APT_frame.JPG>]
 <imagenes/DiagramaGantt.png, id=115, 819.06pt x 320.397pt>
 File: imagenes/DiagramaGantt.png Graphic file (type png)
 <use imagenes/DiagramaGantt.png>
-Package pdftex.def Info: imagenes/DiagramaGantt.png  used on input line 75.
-(pdftex.def)             Requested size: 455.24411pt x 178.08643pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3 <./imagenes/DiagramaGantt.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+Package pdftex.def Info: imagenes/DiagramaGantt.png  used on input line 77.
+(pdftex.def)             Requested size: 455.25856pt x 256.08817pt.
+ [3 <./imagenes/DiagramaGantt.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
  []
 
 
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 128
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 132
 .
 
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-28.
+32.
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 128
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 132
 .
 
 Missing character: There is no º in font zptmcm7t!
-<imagenes/ModeloAntena.png, id=130, 357.7365pt x 397.485pt>
+[4]
+<imagenes/ModeloAntena.png, id=137, 357.7365pt x 397.485pt>
 File: imagenes/ModeloAntena.png Graphic file (type png)
 <use imagenes/ModeloAntena.png>
-Package pdftex.def Info: imagenes/ModeloAntena.png  used on input line 132.
+Package pdftex.def Info: imagenes/ModeloAntena.png  used on input line 136.
 (pdftex.def)             Requested size: 204.85846pt x 227.61806pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<imagenes/PerspectivaTopDown.png, id=131, 385.44pt x 360.1455pt>
+<imagenes/PerspectivaTopDown.png, id=138, 385.44pt x 360.1455pt>
 File: imagenes/PerspectivaTopDown.png Graphic file (type png)
 <use imagenes/PerspectivaTopDown.png>
 Package pdftex.def Info: imagenes/PerspectivaTopDown.png  used on input line 15
-4.
+8.
 (pdftex.def)             Requested size: 227.62206pt x 212.68182pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<imagenes/S11.png, id=133, 526.96875pt x 395.22656pt>
+<imagenes/S11.png, id=140, 526.96875pt x 395.22656pt>
 File: imagenes/S11.png Graphic file (type png)
 <use imagenes/S11.png>
-Package pdftex.def Info: imagenes/S11.png  used on input line 162.
+Package pdftex.def Info: imagenes/S11.png  used on input line 166.
 (pdftex.def)             Requested size: 250.38564pt x 187.78883pt.
-[4]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<imagenes/setup.jpg, id=149, 2746.26pt x 3661.68pt>
+ [5 <./imagenes/ModeloAntena.png> <./imagenes/PerspectivaTopDown.png>]
+<imagenes/setup.jpg, id=154, 2746.26pt x 3661.68pt>
 File: imagenes/setup.jpg Graphic file (type jpg)
 <use imagenes/setup.jpg>
-Package pdftex.def Info: imagenes/setup.jpg  used on input line 172.
+Package pdftex.def Info: imagenes/setup.jpg  used on input line 175.
 (pdftex.def)             Requested size: 250.38564pt x 333.83917pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<imagenes/sdr.jpg, id=151, 1935.23pt x 1003.75pt>
+[6 <./imagenes/S11.png (PNG copy)> <./imagenes/setup.jpg>]
+<imagenes/sdr.jpg, id=163, 1935.23pt x 1003.75pt>
 File: imagenes/sdr.jpg Graphic file (type jpg)
 <use imagenes/sdr.jpg>
-Package pdftex.def Info: imagenes/sdr.jpg  used on input line 183.
+Package pdftex.def Info: imagenes/sdr.jpg  used on input line 187.
 (pdftex.def)             Requested size: 341.43306pt x 177.08327pt.
-[5 <./imagenes/ModeloAntena.png> <./imagenes/PerspectivaTopDown.png>]
-<imagenes/inner_RTL.JPG, id=160, 452.892pt x 192.11775pt>
+<imagenes/inner_RTL.JPG, id=164, 452.892pt x 192.11775pt>
 File: imagenes/inner_RTL.JPG Graphic file (type jpg)
 <use imagenes/inner_RTL.JPG>
-Package pdftex.def Info: imagenes/inner_RTL.JPG  used on input line 194.
+Package pdftex.def Info: imagenes/inner_RTL.JPG  used on input line 198.
 (pdftex.def)             Requested size: 223.06616pt x 142.2675pt.
-<imagenes/rtl.JPG, id=161, 2058.94218pt x 1531.97343pt>
+<imagenes/rtl.JPG, id=165, 2058.94218pt x 1531.97343pt>
 File: imagenes/rtl.JPG Graphic file (type jpg)
 <use imagenes/rtl.JPG>
-Package pdftex.def Info: imagenes/rtl.JPG  used on input line 200.
+Package pdftex.def Info: imagenes/rtl.JPG  used on input line 204.
 (pdftex.def)             Requested size: 223.05989pt x 142.24297pt.
- [6 <./imagenes/S11.png (PNG copy)> <./imagenes/setup.jpg>] [7 <./imagenes/sdr.
-jpg> <./imagenes/inner_RTL.JPG> <./imagenes/rtl.JPG>] [8]
-<imagenes/Gpredict_NOAA.JPG, id=180, 1153.30875pt x 558.28575pt>
+ [7 <./imagenes/sdr.jpg> <./imagenes/inner_RTL.JPG> <./imagenes/rtl.JPG>]
+<imagenes/Gpredict_NOAA.JPG, id=175, 1153.30875pt x 558.28575pt>
 File: imagenes/Gpredict_NOAA.JPG Graphic file (type jpg)
 <use imagenes/Gpredict_NOAA.JPG>
-Package pdftex.def Info: imagenes/Gpredict_NOAA.JPG  used on input line 219.
-(pdftex.def)             Requested size: 455.24408pt x 220.37137pt.
-<imagenes/future_passes.JPG, id=181, 251.13824pt x 246.9225pt>
+Package pdftex.def Info: imagenes/Gpredict_NOAA.JPG  used on input line 223.
+(pdftex.def)             Requested size: 455.24411pt x 220.37137pt.
+<imagenes/future_passes.JPG, id=177, 251.13824pt x 246.9225pt>
 File: imagenes/future_passes.JPG Graphic file (type jpg)
 <use imagenes/future_passes.JPG>
-Package pdftex.def Info: imagenes/future_passes.JPG  used on input line 230.
+Package pdftex.def Info: imagenes/future_passes.JPG  used on input line 236.
 (pdftex.def)             Requested size: 256.0748pt x 251.78601pt.
-<imagenes/primer_paso.JPG, id=183, 498.06075pt x 319.79475pt>
+ [8 <./imagenes/Gpredict_NOAA.JPG>]
+<imagenes/primer_paso.JPG, id=184, 498.06075pt x 319.79475pt>
 File: imagenes/primer_paso.JPG Graphic file (type jpg)
 <use imagenes/primer_paso.JPG>
-Package pdftex.def Info: imagenes/primer_paso.JPG  used on input line 245.
+Package pdftex.def Info: imagenes/primer_paso.JPG  used on input line 249.
 (pdftex.def)             Requested size: 341.43306pt x 219.23862pt.
- [9 <./imagenes/Gpredict_NOAA.JPG>] [10 <./imagenes/future_passes.JPG> <./image
-nes/primer_paso.JPG>]
-<imagenes/wbfm.JPG, id=196, 307.1475pt x 96.96225pt>
+ [9 <./imagenes/future_passes.JPG> <./imagenes/primer_paso.JPG>]
+<imagenes/wbfm.JPG, id=191, 307.1475pt x 96.96225pt>
 File: imagenes/wbfm.JPG Graphic file (type jpg)
 <use imagenes/wbfm.JPG>
-Package pdftex.def Info: imagenes/wbfm.JPG  used on input line 261.
+Package pdftex.def Info: imagenes/wbfm.JPG  used on input line 265.
 (pdftex.def)             Requested size: 341.43306pt x 107.7921pt.
-<imagenes/apt_blocks.JPG, id=197, 551.05875pt x 367.3725pt>
+<imagenes/apt_blocks.JPG, id=192, 551.05875pt x 367.3725pt>
 File: imagenes/apt_blocks.JPG Graphic file (type jpg)
 <use imagenes/apt_blocks.JPG>
-Package pdftex.def Info: imagenes/apt_blocks.JPG  used on input line 272.
+Package pdftex.def Info: imagenes/apt_blocks.JPG  used on input line 276.
 (pdftex.def)             Requested size: 341.43306pt x 227.62843pt.
-<imagenes/APT_hier.JPG, id=199, 860.61525pt x 308.95425pt>
+<imagenes/APT_hier.JPG, id=194, 860.61525pt x 308.95425pt>
 File: imagenes/APT_hier.JPG Graphic file (type jpg)
 <use imagenes/APT_hier.JPG>
-Package pdftex.def Info: imagenes/APT_hier.JPG  used on input line 282.
-(pdftex.def)             Requested size: 483.69684pt x 173.6449pt.
+Package pdftex.def Info: imagenes/APT_hier.JPG  used on input line 286.
+(pdftex.def)             Requested size: 455.24411pt x 163.42911pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 282--283
- [][] 
- []
-
-[11 <./imagenes/wbfm.JPG> <./imagenes/apt_blocks.JPG>]
-<imagenes/diagrama_flujo_completo.JPG, id=210, 1099.7085pt x 466.1415pt>
+[10 <./imagenes/wbfm.JPG> <./imagenes/apt_blocks.JPG>]
+<imagenes/diagrama_flujo_completo.JPG, id=205, 1099.7085pt x 466.1415pt>
 File: imagenes/diagrama_flujo_completo.JPG Graphic file (type jpg)
 <use imagenes/diagrama_flujo_completo.JPG>
 Package pdftex.def Info: imagenes/diagrama_flujo_completo.JPG  used on input li
-ne 299.
-(pdftex.def)             Requested size: 483.69684pt x 205.02464pt.
-
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 299--300
- [][] 
- []
-
-[12 <./imagenes/APT_hier.JPG> <./imagenes/diagrama_flujo_completo.JPG>]
-<imagenes/31_01_nosynch.png, id=218, 866.48718pt x 598.48593pt>
+ne 303.
+(pdftex.def)             Requested size: 455.24411pt x 192.96855pt.
+ [11 <./imagenes/APT_hier.JPG> <./imagenes/diagrama_flujo_completo.JPG>] [12]
+<imagenes/31_01_nosynch.png, id=219, 866.48718pt x 598.48593pt>
 File: imagenes/31_01_nosynch.png Graphic file (type png)
 <use imagenes/31_01_nosynch.png>
-Package pdftex.def Info: imagenes/31_01_nosynch.png  used on input line 347.
-(pdftex.def)             Requested size: 426.79134pt x 294.78574pt.
-<imagenes/31_01_synch.png, id=219, 869.49844pt x 566.86781pt>
+Package pdftex.def Info: imagenes/31_01_nosynch.png  used on input line 353.
+(pdftex.def)             Requested size: 369.88582pt x 255.48097pt.
+<imagenes/31_01_synch.png, id=220, 869.49844pt x 566.86781pt>
 File: imagenes/31_01_synch.png Graphic file (type png)
 <use imagenes/31_01_synch.png>
-Package pdftex.def Info: imagenes/31_01_synch.png  used on input line 356.
-(pdftex.def)             Requested size: 426.79134pt x 278.25204pt.
-
-[13] [14 <./imagenes/31_01_nosynch.png> <./imagenes/31_01_synch.png>]
-<imagenes/noaa_19 pass 31_01.png, id=231, 247.42438pt x 209.78375pt>
+Package pdftex.def Info: imagenes/31_01_synch.png  used on input line 362.
+(pdftex.def)             Requested size: 369.88582pt x 241.15349pt.
+ [13 <./imagenes/31_01_nosynch.png> <./imagenes/31_01_synch.png>]
+<imagenes/noaa_19 pass 31_01.png, id=228, 247.42438pt x 209.78375pt>
 File: imagenes/noaa_19 pass 31_01.png Graphic file (type png)
 <use imagenes/noaa_19 pass 31_01.png>
-Package pdftex.def Info: imagenes/noaa_19 pass 31_01.png  used on input line 36
-5.
+Package pdftex.def Info: imagenes/noaa_19 pass 31_01.png  used on input line 37
+1.
 (pdftex.def)             Requested size: 284.52756pt x 241.25902pt.
- [15 <./imagenes/noaa_19 pass 31_01.png>] [16]
+ [14 <./imagenes/noaa_19 pass 31_01.png>] [15] [16] [17]
+Underfull \hbox (badness 3396) in paragraph at lines 463--464
+[]\OT1/ptm/m/n/12 How it works. (n.d.). Com.Ar. Re-trie-ved Ja-nuary 31, 2023, 
+from https://noaa-
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17] [18] (Memoria.aux
+Underfull \hbox (badness 5504) in paragraph at lines 474--475
+\OT1/ptm/m/n/12 1). Rtl-sdr.com. https://www.rtl-sdr.com/simple-noaameteor-weat
+her-satellite-antenna-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
+[]\OT1/ptm/m/n/12 Table of con-tents. (1989). Spa-ce Scien-ce Re-views, 50(3{4)
+.
+ []
+
+[18] (Memoria.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
@@ -807,13 +805,13 @@ Package rerunfilecheck Info: File `Memoria.out' has not changed.
 (rerunfilecheck)             Checksum: 71DC48FBAFD9CBF047E574050463344B;2496.
  ) 
 Here is how much of TeX's memory you used:
- 14808 strings out of 478659
- 245244 string characters out of 2844972
- 652599 words of memory out of 3000000
- 32602 multiletter control sequences out of 15000+600000
+ 14890 strings out of 478659
+ 246420 string characters out of 2844972
+ 652071 words of memory out of 3000000
+ 32670 multiletter control sequences out of 15000+600000
  432584 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,16n,77p,1311b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,16n,77p,1311b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<
 C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mmi10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
@@ -825,9 +823,9 @@ s/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Usuario/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Memoria.pdf (19 pages, 10413902 bytes).
+Output written on Memoria.pdf (19 pages, 10415292 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
+ 324 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
  250 words of extra memory for PDF output out of 10000 (max. 10000000)
 

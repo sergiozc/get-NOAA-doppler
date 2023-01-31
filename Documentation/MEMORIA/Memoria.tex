@@ -19,6 +19,7 @@
 \usepackage[spanish]{babel}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{float}
 
 \usepackage{caption}
 \usepackage{subcaption}
@@ -60,7 +61,8 @@
 
 
 	En concreto, para los satélites NOAA, las imágenes cuentan con una resolución espacial de 4 km/píxel, tomando imágenes del espectro visible e infrarrojo. La información de la imagen se modula AM con 256 niveles de amplitud, para luego modularse en FM en una portadora en la banda de 137 MHz. Esta decisión de modulación permite que con un receptor sencillo se puedan obetener las imágenes que transmite el satélite. La señal es difundida de manera ininterrumpida.
-	
+
+\newpage
 	
 	
 	\subsection{Efecto Doppler}
@@ -72,12 +74,14 @@ El proyecto se ha realizado durante los meses de Diciembre del año 2022 y Enero
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=1\linewidth]{imagenes/DiagramaGantt.png}
+    \includegraphics[width=1\linewidth, height=9cm]{imagenes/DiagramaGantt.png}
     \caption{Diagrama de Gantt en el que se recoge la distribución del proyecto.}
     \label{Fig:Gantt}
 \end{figure}
 
 Se ha desglosado el trabajo entre los tres integrantes del grupo de trabajo, realizando en paralelo tareas distintas, tanto de hardware como de software, y contribuyendo conjuntamente al objetivo común.
+
+\newpage
 
 \section{Hardware}
 Desde el punto de vista del Hardware se ha utilizado una antena tipo dipolo en V y un RTL-SDR, ambos se describen a continuación.
@@ -127,7 +131,7 @@ El detalle que ha hecho que se opte por la polarización horizontal es que la in
 
 Teniendo en consideración todos los factores mencionados hasta ahora se decidió construir una \textbf{antena tipo dipolo en V} con polarización horizontal que  cumple con las especificaciones requeridas: fácil de construir y funcional en la ancho de banda de trabajo requerido, el único problema que presentan los dipolos son los nulos laterales, sin embargo, este inconveniente se soluciona doblando el dipolo un ángulo $\theta=120º$ de forma que el diagrama de radiación del conjunto de la antena en dirección ortogonal a la misma se vea reforzado. Un modelo 3D de la misma se muestra en Fig.[\ref{fig:modelo3D}], mientras que en Fig.[\ref{fig:topdown}] se muestra la perspectiva top-down.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.45\linewidth]{imagenes/ModeloAntena.png}
     \caption{Modelo 3D de la antena dipolo en V construida.}
@@ -149,7 +153,7 @@ Por tanto, cada uno de los brazos ha de medir:
     L = 53.4cm
 \end{equation*}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{imagenes/PerspectivaTopDown.png}
     \caption{Perspectiva top-down de la antena dipolo en V construida.}
@@ -157,7 +161,7 @@ Por tanto, cada uno de los brazos ha de medir:
 \end{figure}
 
 Una vez se construyó la antena, se hizo uso de un Vector Network Analyzer (VNA) para comprobar a través del parámetro S11 que la antena se comportaba de acuerdo a lo esperado. Los resultados tras la caracterización de dicho parámetro se muestra en la Fig. [\ref{fig:S11}].
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.55\linewidth]{imagenes/S11.png}
     \caption{Módulo del parámetro S11 medido.}
@@ -166,13 +170,13 @@ Una vez se construyó la antena, se hizo uso de un Vector Network Analyzer (VNA)
 
 En la siguiente imagen podemos comprobar el aspecto final de la antena, conectada al dispositivo RTL-SDR y usando la aplicación SDRsharp. La imagen se tomó durante la primera toma de contacto al montar la antena.
 
-[\ref{fig:S11}].
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.55\linewidth]{imagenes/setup.jpg}
     \caption{Setup de la antena construida, conectada al RTL-SDR y a SDRsharp}
     \label{antena_real}
 \end{figure}
+
 
 
 	\subsection{RTL-SDR}
@@ -189,7 +193,7 @@ Directamente se muestrea y se genera la señal en radio frecuencia (RF). Se cons
 
 	 En concreto, el dispositivo RTL-SDR es un tipo de radio definida por software a la que se incorpora el chip ''RTL832U''. Este dispositivo es capaz de proporcionar las partes real y compleja de la señal en banda base, pudiendo abarcar gran parte del espectro de radio frecuencia. El sintonizador interno cubre un ancho de banda desde los 25 MHz hasta casi los 2 MHz. La frecuencia máxima de muestreo en este caso se sitúa en $2.4 MHz$.
 	 
-	 \begin{figure}[!tbp]
+	 \begin{figure}[H]
   \begin{subfigure}[b]{0.49\textwidth}
     \includegraphics[width=\textwidth, height=5cm]{imagenes/inner_RTL.JPG}
     \caption{Interior RTL-SDR}
@@ -205,18 +209,18 @@ Directamente se muestrea y se genera la señal en radio frecuencia (RF). Se cons
 \end{figure}
 
 Este tipo de dispositivos fueron pensados primeramente como receptores DVB-T para la televisión, pero su gran versatilidad ha dado lugar a diferentes usos en FM, AM e incluso GPS.
-El RTL-SDR utilizado en el proyecto se muestra en la \textit{Figura \ref{rtl}} y su interior en la \textit{Figura \ref{inner_RTL}.} 
+El RTL-SDR utilizado en el proyecto se muestra en la Figura [\ref{rtl}] y su interior en la Figura [\ref{inner_RTL}].
 \newpage
 \section{Software}
 
 	\subsection{Programa Gpredict}
 	Se ha utilizado como herramienta de apoyo el programa \textit{Gpredict}. Es un programa que llega a proporcionar información sobre una gran cantidad de satélites, así como su órbita, velocidad y frecuencia a la que emiten, tiempo en función de la posición...
 	
-	Es necesario definir primero una estación baso. En el caso de este proyecto, se han definido las coordenadas de Granada, España. Una vez definida la estación base, se seleccionan los satélites a los que les quieres realizar el seguimiento. En este caso serán los satélites NOAA activos (NOAA-18, NOAA-19 y NOAA-15). La interfaz del programa con la estación base y los satélites definidos se muestra en la \textit{Figura \ref{gpredict}}.
+	Es necesario definir primero una estación baso. En el caso de este proyecto, se han definido las coordenadas de Granada, España. Una vez definida la estación base, se seleccionan los satélites a los que les quieres realizar el seguimiento. En este caso serán los satélites NOAA activos (NOAA-18, NOAA-19 y NOAA-15). La interfaz del programa con la estación base y los satélites definidos se muestra en la Figura [\ref{gpredict}].
 	
-	\begin{figure}[hbtp]
+	\begin{figure}[H]
  \centering
- \includegraphics[width = 16cm]{imagenes/Gpredict_NOAA.JPG}
+ \includegraphics[width = 1 \linewidth]{imagenes/Gpredict_NOAA.JPG}
  \caption{Gpredict satélites NOAA}
  \label{gpredict}
  \end{figure}
@@ -224,16 +228,16 @@ El RTL-SDR utilizado en el proyecto se muestra en la \textit{Figura \ref{rtl}} y
  En la parte inferior de la captura de pantalla se puede visualizar la posición en coordenadas del satélite y otros datos como la velocidad, altitud, fase, elevación y hasta una aproximación del efecto Doppler en unidades de frecuencia.
  
  Más información sobre cada satélite se puede consultar mediante click derecho en el satélite en cuestión. Es de interés la información de \textit{Future Passes}, la cual ayuda a saber a qué momento del día va a pasar el satélite cerca de nuestra ubicación de la estación base.
+ 
+   Dentro de esta misma opción, se puede visualizar gráficamente la trayectoria del satélite, como se observa en la Figura [\ref{trayectoria}]. Esta representación es de gran ayuda para saber el tiempo óptimo a la hora de captar la señal. Con los datos proporcionados por \textit{Gpredict}, se ha logrado en este proyecto captar las señales de los satélites NOAA para los tiempos previstos, por lo que es de gran utilidad.
 
-	\begin{figure}[hbtp]
+	\begin{figure}[H]
  \centering
  \includegraphics[width = 9cm]{imagenes/future_passes.JPG}
  \caption{Trayectoria NOAA-19}
  \label{trayectoria}
  \end{figure}
  
- 
-  Dentro de esta misma opción, se puede visualizar gráficamente la trayectoria del satélite, como se observa en la \textit{Figura \ref{trayectoria}}. Esta representación es de gran ayuda para saber el tiempo óptimo a la hora de captar la señal. Con los datos proporcionados por \textit{Gpredict}, se ha logrado en este proyecto captar las señales de los satélites NOAA para los tiempos previstos, por lo que es de gran utilidad.
 
 	\subsection{Diagrama de flujo en GNU Radio}
 	Con el propósito de procesar la señal recibida del RTL-SDR a tiempo real se ha creado un diagrama de bloques en GNU Radio. Los pasos a realizar en el procesamiento de la señal se han realizado teniendo en cuenta el estándar APT y son los siguientes:
@@ -250,7 +254,7 @@ El RTL-SDR utilizado en el proyecto se muestra en la \textit{Figura \ref{rtl}} y
  El bloque de ''RTL-SDR Source'' capta la señal directamente del dispositivo, con una tasa de muestreo de $2.4 MHz$, la frecuencia central la del satélite deseado y una ganancia en RF bastante alta (unos 35-40 dB).
  Se filtra paso baja con una frecuencia de corte poco restrictiva de $20 kHz$ para eliminar contribuciones ruidosas, ya que debido al efecto doppler, la frecuencia central de la señal del satélite podría variar y si se posee un ancho de banda restrictivo parte de la información podría perderse. Posteriormente se remuestrea la señal para trabajar a $96 kHz$.
 
-Los bloques restantes no mencionados corresponden a \textit{GUI }, es decir, el espectro de la señal mostrado por pantalla.
+Los bloques restantes no mencionados corresponden a \textit{GUI}, es decir, el espectro de la señal mostrado por pantalla.
  
  
  
@@ -275,11 +279,11 @@ Los bloques restantes no mencionados corresponden a \textit{GUI }, es decir, el 
  \end{figure}
 	
 	
-Después de obtener la señal de audio a la frecuencia de $11.025 kHz$, se llega a un bloque jerárquico llamado \textit{WavToImg} el cual realiza la correspondiente conversión de señal de audio a imagen APT. El interior de este bloque se muestra en la \textit{Figura \ref{wavtoimage}}.
+Después de obtener la señal de audio a la frecuencia de $11.025 kHz$, se llega a un bloque jerárquico llamado \textit{WavToImg} el cual realiza la correspondiente conversión de señal de audio a imagen APT. El interior de este bloque se muestra en la Figura [\ref{wavtoimage}].
 
- \begin{figure}[hbtp]
+ \begin{figure}[H]
  \centering
- \includegraphics[width = 17cm]{imagenes/APT_hier.JPG}
+ \includegraphics[width = 1 \linewidth]{imagenes/APT_hier.JPG}
  \caption{Bloque WavToImg}
  \label{wavtoimage}
  \end{figure}	
@@ -296,12 +300,12 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 	
 	\begin{figure}[hbtp]
  \centering
- \includegraphics[width = 17cm]{imagenes/diagrama_flujo_completo.JPG}
+ \includegraphics[width = 1 \linewidth]{imagenes/diagrama_flujo_completo.JPG}
  \caption{Diagrama de flujo}
  \label{diagrama_completo}
  \end{figure}
 
-
+\newpage
 
 
 	\subsection{Corrección del efecto Doppler}
@@ -316,7 +320,7 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 	
 	\subsection{Método propuesto} 
 	
-	Utilizando un método a posteriori, se puede corregir el efecto Doppler de cualquier imagen APT, con independencia del momento en el que se tomó la imagen y sin necesidad de contar con la información exacta de la órbita del satélite en el momento de paso. Se ha implementado un algoritmo en Matlab que lleva a cabo una corrección. Su funcionamiento está basado en la interpolación / decimado de las líneas de la imagen, en base a la información aportada por el estándar APT. El algoritmo parte de la señal AM, ya que la demodulación FM se realiza automáticamente en la aplicación de captura. La descripción del algoritmo:
+	Utilizando un método a posteriori, se puede corregir el efecto Doppler de cualquier imagen APT, con independencia del momento en el que se tomó la imagen y sin necesidad de contar con la información exacta de la órbita del satélite en el momento de paso. Se ha implementado un algoritmo en Matlab, basando su fundamento en \cite{7}, que lleva a cabo una corrección. Su funcionamiento está basado en la interpolación / decimado de las líneas de la imagen, en base a la información aportada por el estándar APT. El algoritmo parte de la señal AM, ya que la demodulación FM se realiza automáticamente en la aplicación de captura. La descripción del algoritmo:
 
 \begin{itemize}
 
@@ -337,23 +341,25 @@ La salida del bloque "WavtoImg" proporciona la señal APT demodulada y se muestr
 	
 	\end{itemize}
 
+\newpage
+
 \section{Resultados}
 
 La implementación del método propuesto fue exitosa. Se consiguió demodular la información contenida en la imagen AM, así como corregir el efecto Doppler de la imagen de manera exitosa. Como referencia, se muestra a continuación la representación de la imagen tras la demodulación AM, sin utilizar los pulsos de sincronización y sin realizar la corrección del efecto Doppler:
 
 
- \begin{figure}[hbtp]
+ \begin{figure}[H]
  \centering
- \includegraphics[width = 15cm]{imagenes/31_01_nosynch.png}
+ \includegraphics[width = 13cm]{imagenes/31_01_nosynch.png}
  \caption{Representación de la imagen sin corrección del Efecto Doppler}
  \label{apt_nosynch}
  \end{figure}
  
  Tras aplicarle a la imagen el algoritmo descrito en el apartado anterior, se consigue una corrección total del Efecto Doppler, así como un ajuste de la imagen al estándar APT, gracias a los pulsos de sincronización:
 
- \begin{figure}[hbtp]
+ \begin{figure}[H]
  \centering
- \includegraphics[width = 15cm]{imagenes/31_01_synch.png}
+ \includegraphics[width = 13cm]{imagenes/31_01_synch.png}
  \caption{Representación de la imagen con corrección del Efecto Doppler}
  \label{apt_corrected}
  \end{figure}
@@ -408,6 +414,8 @@ Otra mejora sería la inclusión de un sistema empotrado conectado al RTL-SDR. D
 Respecto a la corrección del efecto doppler, se ha propuesto una vía alternativa mediante la interpolación-decimado, el cual no depende de datos como la velocidad del satélite. Sin embargo, esta corrección que se ha realizado se realiza de forma asíncrona, por lo que una nueva mejora sería implementar una corrección del efecto doppler a tiempo real. De esta nueva forma serán necesarios datos como la velocidad del satélite en todo momento y la debida conexión a un software de seguimiento de satélites a tiempo real como puede ser \textit{Gpredict}.
 La resolución de las imágenes obtenidas es limitada, debido a que en un estándar analógico como APT, la calidad máxima no es tan alta como la común a día de hoy, en el que cientos de satélites envían imágenes a color en alta resolución. Una vía de mejora podría consistir en la obtención de imágenes enviadas en formato digital de un satélite de meteorología, como la serie de satélites rusos METEOR-M2. Estas imágenes se pueden obtener de una manera relativamente similar, proporcionando una imagen a color y de mucha mayor resolución.
 
+\newpage
+
 \section{Presupuesto}
 Una vez completado el proyecto, el presupuesto asociado al mismo se detalla en la Tabla [\ref{Tab3:Presupuesto}].
 
@@ -439,10 +447,34 @@ Una vez completado el proyecto, el presupuesto asociado al mismo se detalla en l
 \label{Tab3:Presupuesto}
 \end{table}
 
-\begin{thebibliography}{1}
+\newpage
+
+\begin{thebibliography}{11}
 
 
-\bibitem{tutorialArrays}McCowan, I. (2001). Microphone arrays: A tutorial. Queensland University, Australia, 1-38.
+\bibitem{1}137 MHz WX-SAT original 9A4QV V-dipole antenna. (2020, December 28).
+
+\bibitem{2}Automatic Picture Transmission (APT). (n.d.). Sigidwiki.com. Retrieved January 31, 2023, from https://www.sigidwiki.com/wiki/Automatic-Picture-Transmission-(APT)
+
+\bibitem{3}Crisan, N., Cremene, L. (n.d.). Noaa signal decoding and image processing using gnu-radio. Utcluj.Ro. Retrieved January 31, 2023
+
+\bibitem{4}gr-gpredict-doppler: GNU Radio Gpredict Doppler shift correction block. (n.d.).
+
+\bibitem{5}How it works. (n.d.). Com.Ar. Retrieved January 31, 2023, from https://noaa-apt.mbernardi.com.ar/how-it-works.html
+
+\bibitem{6}How to build A V Dipole for receiving weather satellites. (2020, May 31).
+
+\bibitem{7}Lin, S.-S., Song, Y.-Z. (2021). A Doppler effect correction method for APT weather satellite image reception. 2021 International Symposium on Intelligent Signal Processing and Communication Systems (ISPACS).
+
+\bibitem{8}NOAA-19 APT reception using GNU radio and a FUNcube dongle. (n.d.). Websterling.com. Retrieved January 31, 2023, from http://websterling.com/tsro/apt/
+
+\bibitem{9}RTL-SDR tutorial: Receiving NOAA weather satellite images. (2013, May 13). Rtl-sdr.com. https://www.rtl-sdr.com/rtl-sdr-tutorial-receiving-noaa-weather-satellite-images/
+
+
+\bibitem{10}Simple NOAA/Meteor weather satellite antenna: A 137 MHz V-dipole. (2017, March 1). Rtl-sdr.com. https://www.rtl-sdr.com/simple-noaameteor-weather-satellite-antenna-137-mhz-v-dipole/
+
+
+\bibitem{11}Table of contents. (1989). Space Science Reviews, 50(3–4). https://doi.org/10.1007/bf00228384
 
 
 \end{thebibliography}
